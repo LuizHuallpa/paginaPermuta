@@ -14,7 +14,7 @@ body{
   scroll-snap-type: y mandatory;
 }
 
-.flexContainer{
+section{
   scroll-snap-align: start;
   height: 100vh;
 
