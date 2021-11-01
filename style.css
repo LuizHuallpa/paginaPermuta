@@ -2,6 +2,7 @@ body{
     
     font-family: 'Roboto', sans-serif;
     color:#fff;
+    scroll-snap-type: y mandatory;
 
 }
 
@@ -11,10 +12,11 @@ body{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-snap-type: y mandatory;
 }
 
 .flexContainer{
-  
+  scroll-snap-align: start;
   height: 100vh;
 
 }
@@ -42,6 +44,8 @@ body{
     align-items:center;
     justify-content:center;
     height: 100vh;
+    scroll-snap-align: start;
+   
 }
 
 .botao {
