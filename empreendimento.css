@@ -1,0 +1,40 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    color:#fff;
+    scroll-snap-type: y mandatory;
+
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: y mandatory;
+}
+
+.flexContainer{
+  scroll-snap-align: start;
+  height: 100vh;
+
+}
+
+.slider1{
+    background-image: url('imgs/ImagensCampinas/Vídeo\ Uruguaiana\ -\ Corretores\ \(1\)\ 3165.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    height: 100vh;
+}
+
+.midpage{
+    background-color: rgb(49, 49, 49, 0.5);
+    height: 100%;
+    align-items:center;
+}
+
+/* .backgroundmid{
+    background-color: #333;
+    height: 100%;
+} */
