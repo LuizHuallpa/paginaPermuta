@@ -17,7 +17,8 @@ body{
 section{
   scroll-snap-align: start;
   height: 100vh;
-  background-color:#003b5c;
+  /* background-color:#003b5c; */
+  background-color: rgb(49, 49, 49);
 
 }
 
