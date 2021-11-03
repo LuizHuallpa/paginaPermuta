@@ -22,6 +22,10 @@ section{
 
 }
 
+footer{
+  scroll-snap-align: start;
+}
+
 .slider1{
     background-image: url('imgs/ImagensCampinas/Vídeo\ Uruguaiana\ -\ Corretores\ \(1\)\ 3165.jpg');
     background-position: center; /* Center the image */
@@ -29,8 +33,6 @@ section{
     background-size: cover; /* Resize the background image to cover the entire container */
     height: 100vh;
 }
-
-
 
 .midpage{
     background-color: rgb(49, 49, 49, 0.5);

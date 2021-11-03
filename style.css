@@ -21,6 +21,10 @@ body{
 
 }
 
+footer{
+  scroll-snap-align: start;
+}
+
 .page1{
   background: rgb(2,0,36);
   background: linear-gradient(126deg, rgba(2,0,36,1) 0%, rgba(0,59,92,1) 43%, rgba(0,212,255,1) 100%);
