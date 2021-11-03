@@ -17,6 +17,7 @@ body{
 section{
   scroll-snap-align: start;
   height: 100vh;
+  background-color:#003b5c;
 
 }
 
@@ -28,9 +29,7 @@ section{
     height: 100vh;
 }
 
-.slider2{
-  color: #333;
-}
+
 
 .midpage{
     background-color: rgb(49, 49, 49, 0.5);
@@ -38,7 +37,3 @@ section{
     align-items:center;
 }
 
-/* .backgroundmid{
-    background-color: #333;
-    height: 100%;
-} */
