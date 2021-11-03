@@ -28,6 +28,10 @@ section{
     height: 100vh;
 }
 
+.slider2{
+  color: #333;
+}
+
 .midpage{
     background-color: rgb(49, 49, 49, 0.5);
     height: 100%;
