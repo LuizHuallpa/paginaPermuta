@@ -29,9 +29,9 @@ footer{
 
 .slider1{
     background-image: url('imgs/ImagensCampinas/Vídeo\ Uruguaiana\ -\ Corretores\ \(1\)\ 3165.jpg');
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
     height: 100vh;
 }
 
