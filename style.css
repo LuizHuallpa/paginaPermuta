@@ -18,12 +18,13 @@ body{
 .flexContainer{
   scroll-snap-align: start;
   height: 100vh;
-
+  width: 100vw;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-footer{
-  scroll-snap-align: start;
-}
 
 .page1{
   background: rgb(2,0,36);
@@ -41,16 +42,6 @@ footer{
   color: #454545;
 }
 
-
-.flexContainer{
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    height: 100vh;
-    scroll-snap-align: start;
-   
-}
 
 .botao {
     margin-top:20px;
@@ -84,7 +75,10 @@ footer{
   }
 
 
-
+  footer{
+    scroll-snap-align: start;
+    width: 100vw;
+  }
 
 
 
@@ -109,3 +103,4 @@ footer{
       transform: translateY(-5px);
     }
   }
+
