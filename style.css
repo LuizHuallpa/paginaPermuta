@@ -76,6 +76,11 @@ body{
     align-items: center;
   }
 
+ @media(max-width:762px){
+  .mobile{
+    display: none;
+  }
+ } 
 
 
 
