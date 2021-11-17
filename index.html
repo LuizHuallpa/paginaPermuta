@@ -49,7 +49,6 @@
     <section
       class="
         flexContainer
-        d-flex
         container-fluid
         page2
         align-content-center
@@ -58,57 +57,153 @@
       "
       id="section04"
     >
-      <div class="col-sm-6 wow fadeInLeft border-end">
-        <h2>Como Compro?</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-          doloremque aspernatur beatae libero aliquam officia inventore unde
-          illum officiis harum? Modi recusandae veniam enim omnis, aperiam
-          sapiente ipsa officiis ducimus, quasi minima obcaecati similique cum
-          hic facere mollitia. Quam, necessitatibus!
-        </p>
-        <div class="col-sm-12">
-          <a type="button" href="empreendimento.html" class="btn btn-primary"
-            >Confira o nosso imóvel</a
-          >
+      <div class="row">
+        <div class="col-md-6 wow fadeInLeft border-end">
+          <h2 class="bolder">Quem somos?</h2>
+          <p>
+            A HBR Invest nasceu em 2009, a partir da aquisição de imóveis para
+            locações. Com a atuação incansável da nossa equipe, novos caminhos e
+            novas oportunidades levaram, dois anos depois, à expansão de nossas
+            atividades, com início do segmento de incorporações imobiliárias.
+            Sempre focados no desenvolvimento das regiões por onde passamos e no
+            crescimento de nossos parceiros, atuamos estrategicamente na
+            incorporação e análise de áreas e seu potencial de retorno do
+            investimento. Em 2018, atingimos a marca de aproximadamente R$ 500
+            milhões em projetos próprios e pretendemos seguir em frente,
+            avançando pelo nosso desenvolvimento e para o seu sucesso.
+          </p>
+          <div class="col-sm-12">
+            <a
+              type="button"
+              href="https://www.hbrinvest.com.br"
+              class="btn btn-primary"
+              >Confira o nosso site</a
+            >
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="imgs/house.jpg"
+            class="img-responsive img-fluid"
+            alt="house"
+          />
         </div>
       </div>
-      <div class="col-sm-6">
-        <img
-          src="imgs/house.jpg"
-          class="img-responsive img-fluid"
-          alt="house"
-        />
+      <a href="#" class="setaDown"
+        ><i class="fa fa-chevron-down fs-2 fs-bolder text-dark"></i
+      ></a>
+    </section>
+    <section class="flexContainer page1 container-fluid p-1">
+      <form>
+      <div class="row">
+      
+          <div class="col-md-6 wow fadeInLeft">
+            <h2 class="text-center">Nos fale sobre o seu imóvel</h2>
+            <div class="card p-4">
+              <div class="form-check form-switch form-control-lg">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckChecked"
+                  checked
+                />
+                <label
+                  class="form-check-label text-dark"
+                  for="flexSwitchCheckChecked "
+                  >Documentação ok?</label
+                >
+              </div>
+              <div class="form-check form-switch form-control-lg">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckChecked"
+                  checked
+                />
+                <label
+                  class="form-check-label text-dark"
+                  for="flexSwitchCheckChecked "
+                  >Imóvel precisa de reformas?</label
+                >
+              </div>
+              <div class="form-check form-switch form-control-lg">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckChecked"
+                  checked
+                />
+                <label
+                  class="form-check-label text-dark"
+                  for="flexSwitchCheckChecked "
+                  >Aceita permutas por outros imóveis?</label
+                >
+              </div>
+              <div class="form-check form-switch form-control-lg">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckChecked"
+                  checked
+                />
+                <label
+                  class="form-check-label text-dark"
+                  for="flexSwitchCheckChecked "
+                  >Imóvel possui débitos/dívidas/outros?</label
+                >
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="col-md-6 wow fadeInRight ">
+            <div class="card p-4">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label text-dark">Valor do imóvel</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+               
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label text-dark">Metragem do Imóvel</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label text-dark">Metragem do Terreno</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+               
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label text-dark">Cidade</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+               
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label text-dark">Nome do Condomínio/Residencial do Imóvel</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              
+              </div>
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary mb-4">
+                  Enviar
+                </button>
+              </div>
+            </div>
+         </div>
+        
       </div>
+    </form>
     </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="source.js"></script>
-    <script src="wow.js"></script>
-    <script>
-      new WOW().init();
-    </script>
     <!-- Footer -->
-    <footer class="bg-dark text-center">
+    <footer class="bg-dark text-center w-100">
       <!-- Grid container -->
       <div class="container p-4">
         <!-- Section: Social media -->
         <div class="mb-4">
           <!-- Facebook -->
-          <a
-            class="m-2"
-            target="_blank"
-            href="https://www.facebook.com"
+          <a class="m-2" target="_blank" href="https://www.facebook.com"
             ><i class="fab fa-facebook-f"></i
           ></a>
 
@@ -184,5 +279,22 @@
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="source.js"></script>
+    <script src="wow.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
