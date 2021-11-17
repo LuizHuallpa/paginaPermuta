@@ -120,3 +120,35 @@ body{
     left: 50%;
     animation: bounce 2s infinite 2s;
   }
+
+  .whatsIcon{
+    position:fixed;
+    bottom:40px;
+    right:13px;
+    font-size: 80px;
+    /* animation: nudge 2s linear infinite; */
+    cursor:pointer;
+    z-index:99;
+    /* mix-blend-mode:difference; */
+    color:rgba(5,97,98,255);
+  }
+
+  .nudge{
+    animation: nudge 2s linear infinite;
+  }
+
+  @keyframes nudge {
+    20%,
+    100% {
+      transform: translate(0, 0);
+    }
+    0% {
+      transform: translate(0, 50px);
+      transform: rotate(50deg);
+    }
+    10% {
+      transform: translate(0, -50px);
+      transform: rotate(-50deg);
+    }
+  }
+  
