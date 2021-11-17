@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" type="text/css" media />
+    <link rel="stylesheet" href="/plugins/css/on-off-switch.css" type="text/css" media />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -101,52 +102,41 @@
             
             <div class="card cardForm p-4">
               <div class="form-check form-switch form-control-lg">
-                <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" >
-                <label class="btn btn-outline-success" for="success-outlined">Sim</label>
-                
-                <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off" checked>
-                <label class="btn btn-outline-danger" for="danger-outlined">Não</label>
                 <label
-                  class="form-check-label text-dark"
-                  for="flexSwitchCheckChecked "
-                  >Documentação ok?</label
-                >
+                class="form-check-label text-dark"
+                for="on-off-switch-custom "
+                >Documentação ok?</label
+              >
+                <input type="hidden" id="on-off-switch-custom" class='botaoSwitch' name="on-off-switch-custom" value="0">
+
+   
               </div>
               <div class="form-check form-switch form-control-lg">
-                <input type="radio" class="btn-check" name="options-outlined1" id="success-outlined1" autocomplete="off" >
-                <label class="btn btn-outline-success" for="success-outlined1">Sim</label>
-                
-                <input type="radio" class="btn-check" name="options-outlined1" id="danger-outlined1" autocomplete="off" checked>
-                <label class="btn btn-outline-danger" for="danger-outlined1">Não</label>
                 <label
-                  class="form-check-label text-dark"
-                  for="flexSwitchCheckChecked "
-                  >Imóvel precisa de reformas?</label
-                >
+                class="form-check-label text-dark"
+                for="flexSwitchCheckChecked "
+                >Imóvel precisa de reformas?</label
+              >
+                <input type="hidden" id="on-off-switch-custom1" class='botaoSwitch' name="on-off-switch-custom" value="0">
+
               </div>
               <div class="form-check form-switch form-control-lg">
-                <input type="radio" class="btn-check" name="options-outlined2" id="success-outlined2" autocomplete="off" >
-                <label class="btn btn-outline-success" for="success-outlined2">Sim</label>
-                
-                <input type="radio" class="btn-check" name="options-outlined2" id="danger-outlined2" autocomplete="off" checked>
-                <label class="btn btn-outline-danger" for="danger-outlined2">Não</label>
                 <label
-                  class="form-check-label text-dark"
-                  for="flexSwitchCheckChecked "
-                  >Aceita permutas por outros imóveis?</label
-                >
+                class="form-check-label text-dark"
+                for="flexSwitchCheckChecked "
+                >Aceita permutas por outros imóveis?</label
+              >
+                <input type="hidden" id="on-off-switch-custom2" class='botaoSwitch' name="on-off-switch-custom" value="0">
+
               </div>
               <div class="form-check form-switch form-control-lg">
-                <input type="radio" class="btn-check" name="options-outlined3" id="success-outlined3" autocomplete="off" >
-                <label class="btn btn-outline-success" for="success-outlined3">Sim</label>
-                
-                <input type="radio" class="btn-check" name="options-outlined3" id="danger-outlined3" autocomplete="off" checked>
-                <label class="btn btn-outline-danger" for="danger-outlined3">Não</label>
                 <label
-                  class="form-check-label text-dark"
-                  for="flexSwitchCheckChecked "
-                  >Imóvel possui débitos/dívidas/outros?</label
-                >
+                class="form-check-label text-dark"
+                for="flexSwitchCheckChecked "
+                >Imóvel possui débitos/dívidas/outros?</label
+              >
+                <input type="hidden" id="on-off-switch-custom3" class='botaoSwitch' name="on-off-switch-custom" value="0">
+
               </div>
             </div>
             
@@ -267,11 +257,23 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-
+    <script src="plugins/js/on-off-switch.js"></script>
+    <script src="plugins/js/on-off-switch-onload.js"></script>
     <script src="source.js"></script>
     <script src="wow.js"></script>
     <script>
       new WOW().init();
+
+      new DG.OnOffSwitchAuto({
+            cls: '.botaoSwitch',
+            height: 30,
+            trackColorOn:'#003b5c',
+            trackColorOff:'#666',
+            trackBorderColor:'#555',
+            textColorOff:'#fff',
+            textOn:'SIM',
+            textOff:'NÂO'
+        });
     </script>
   </body>
 </html>
