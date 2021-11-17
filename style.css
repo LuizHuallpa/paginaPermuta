@@ -76,6 +76,10 @@ body{
     align-items: center;
   }
 
+  .cardForm {
+    
+  }
+
 
   footer{
     scroll-snap-align: start;

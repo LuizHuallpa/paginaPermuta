@@ -23,7 +23,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link href="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/css/smart_wizard_all.css" rel="stylesheet" type="text/css" />
     <script src="https://use.fontawesome.com/0b0d86c63d.js"></script>
     <title>Compro o seu imóvel em condomínio.</title>
   </head>
@@ -85,7 +85,7 @@
         </div>
         <div class="col-md-6">
           <img
-            src="imgs/house.jpg"
+            src="imgs/business.jpg"
             class="img-responsive img-fluid"
             alt="house"
           />
@@ -99,13 +99,13 @@
       <form>
       <div class="row d-flex justify-content-center align-items-center py-2">
         <h2 class="text-center mb-4">Nos fale sobre o seu imóvel</h2>
-          <div class="col-md-6 wow fadeInLeft">
-            
-            <div class="card cardForm p-4">
-              <p>lorem60</p>
-            </div>
-            
-          </div>
+        <div class="col-md-6">
+          <img
+            src="imgs/house.jpg"
+            class="img-responsive img-fluid"
+            alt="house"
+          />
+        </div>
           
           <div class="col-md-6 wow fadeInRight ">
             <div class="card cardForm p-4 "  >
@@ -192,9 +192,6 @@
         
       </div>
     </form>
-
- 
-
     </section>
 
     <!-- Footer -->
@@ -297,8 +294,8 @@
  // SmartWizard initialize
  $('#smartwizard').smartWizard({
    theme: 'dots',
-  justified: true,
-  autoAdjustHeight: true, // Automatically adjust content height
+  
+  
   cycleSteps: false, // Allows to cycle the navigation of steps
   backButtonSupport: true, // Enable the back button support
   lang: { // Language variables for button
