@@ -26,7 +26,6 @@ body{
 }
 
 
-
 .page1{
   background: rgb(2,0,36);
   background: linear-gradient(126deg, rgba(2,0,36,1) 0%, rgba(0,59,92,1) 43%, rgba(0,212,255,1) 100%);
@@ -121,16 +120,17 @@ body{
     animation: bounce 2s infinite 2s;
   }
 
-  .whatsIcon{
+  .whatsIcon{ 
+    width:80px;
     position:fixed;
     bottom:40px;
     right:13px;
     font-size: 80px;
-    /* animation: nudge 2s linear infinite; */
     cursor:pointer;
     z-index:99;
-    /* mix-blend-mode:difference; */
-    color:rgba(5,97,98,255);
+    background-image: url('imgs/whatsimg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .nudge{
@@ -151,4 +151,19 @@ body{
       transform: rotate(-50deg);
     }
   }
+  
+  .tag {
+    line-height: 1;
+    background: #182f3d;
+    color: #fff !important;
+}
+
+
+  .timeline .tags {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 84px;
+  }
+
   
