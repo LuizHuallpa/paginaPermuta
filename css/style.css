@@ -162,6 +162,11 @@ body{
     color: #fff !important;
 }
 
+.timeline h6{
+  color: rgb(20,44,60);
+  font-weight: 700;
+}
+
 
   .timeline .tags {
     position: absolute;
@@ -199,4 +204,8 @@ ul.timeline > li:before {
     width: 20px;
     height: 20px;
     z-index: 400;
+}
+
+section{
+  max-height: 100vh;
 }
