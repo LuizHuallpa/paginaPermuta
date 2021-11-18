@@ -30,7 +30,7 @@ body{
   background: rgb(2,0,36);
   background: linear-gradient(126deg, rgba(2,0,36,1) 0%, rgba(0,59,92,1) 43%, rgba(0,212,255,1) 100%);
   background-repeat: no-repeat; 
-  max-height: 100vh;
+  min-height: 100vh;
 }
 
 .page1 h1{
@@ -78,6 +78,7 @@ body{
 
   .cardForm{
     border-radius:20px;
+    max-height:90vh;
   }
 
  @media(max-width:762px){
