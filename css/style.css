@@ -78,7 +78,7 @@ body{
 
   .cardForm{
     border-radius:20px;
-    max-height:90vh;
+    
   }
 
  @media(max-width:762px){

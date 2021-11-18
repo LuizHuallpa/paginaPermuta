@@ -14,7 +14,7 @@ new DG.OnOffSwitchAuto({
 
 // SmartWizard initialize
 $('#smartwizard').smartWizard({
-theme: 'dots',
+theme: 'default',
 autoAdjustHeight: true, // Automatically adjust content height
 
 cycleSteps: false, // Allows to cycle the navigation of steps
@@ -25,7 +25,7 @@ previous: 'Anterior'
 },
 toolbarSettings: {
 toolbarPosition: 'bottom', // none, top, bottom, both
-toolbarButtonPosition: 'right', // left, right, center
+toolbarButtonPosition: 'left', // left, right, center
 showNextButton: true, // show/hide a Next button
 showPreviousButton: true, // show/hide a Previous button
 toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
