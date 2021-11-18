@@ -228,3 +228,14 @@ ul.timeline > li:before {
     z-index: 400;
 }
 
+.whatIcon{
+  color:green;
+}
+
+.instaIcon{
+  color:red;
+}
+
+.socials{
+  font-size:35px;
+}

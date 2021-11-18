@@ -21,7 +21,8 @@ cycleSteps: false, // Allows to cycle the navigation of steps
 backButtonSupport: true, // Enable the back button support
 lang: { // Language variables for button
 next: 'Próximo',
-previous: 'Anterior'
+previous: 'Anterior',
+finish: 'Enviar'
 },
 toolbarSettings: {
 toolbarPosition: 'bottom', // none, top, bottom, both
