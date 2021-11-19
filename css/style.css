@@ -48,9 +48,33 @@ body{
     background-position: center center;
     height: 100vh; 
     color: #454545;
-    /*to vertically align the content inside, a definite height should be set on the parent. min-height doesn't work.*/
   
   
+  
+}
+
+.page2test{
+  /* background-color: #fff; */
+  min-height: 100%;
+  background-image:  url("/imgs/bg4.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repet;
+  background-position: center center;
+  height: 100vh; 
+  color: #fff;
+}
+
+.page2test2{
+  background-color: #003b5c;
+  /*min-height: 100%;*/
+  /* background-image:  url("/imgs/bg4.jpg"); */
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repet;
+  background-position: center center;
+  height: 100vh; 
+  color: #fff;
 }
 
 .page3{
@@ -238,4 +262,8 @@ ul.timeline > li:before {
 
 .socials{
   font-size:35px;
+}
+
+.sw-theme-arrows {
+  border: 0!important;
 }
