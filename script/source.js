@@ -14,9 +14,8 @@ new DG.OnOffSwitchAuto({
 
 // SmartWizard initialize
 $('#smartwizard').smartWizard({
-theme: 'default',
+theme: 'arrows',
 autoAdjustHeight: true, // Automatically adjust content height
-
 cycleSteps: false, // Allows to cycle the navigation of steps
 backButtonSupport: true, // Enable the back button support
 lang: { // Language variables for button
