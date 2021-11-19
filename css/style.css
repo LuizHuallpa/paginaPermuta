@@ -271,3 +271,7 @@ ul.timeline > li:before {
 .sw-theme-arrows {
   border: 0!important;
 }
+
+textarea {
+  resize: none;
+}
