@@ -264,6 +264,10 @@ ul.timeline > li:before {
   font-size:35px;
 }
 
+.socials img{
+  max-height: 50px;
+}
+
 .sw-theme-arrows {
   border: 0!important;
 }
