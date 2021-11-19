@@ -39,15 +39,15 @@ body{
 }
 
 .page2{
-  
+    background-color: #fff;
     /*min-height: 100%;*/
-    background-image:  url("/imgs/bg4.jpg");
+    /* background-image:  url("/imgs/bg4.jpg"); */
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repet;
     background-position: center center;
     height: 100vh; 
-    color: #fff;
+    color: #454545;
     /*to vertically align the content inside, a definite height should be set on the parent. min-height doesn't work.*/
   
   
