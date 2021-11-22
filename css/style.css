@@ -38,6 +38,12 @@ body{
   font-size: 70px;
 }
 
+.disclaimer{
+  position: absolute;
+  bottom: 10px;
+  font-size:8px;
+}
+
 .page2{
     background-color: #fff;
     /*min-height: 100%;*/

@@ -35,6 +35,48 @@ toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery inp
 
 });
 
+$('#smartwizard1').smartWizard({
+  theme: 'arrows',
+  autoAdjustHeight: false, // Automatically adjust content height
+  cycleSteps: false, // Allows to cycle the navigation of steps
+  backButtonSupport: true, // Enable the back button support
+  lang: { // Language variables for button
+  next: 'Próximo',
+  previous: 'Anterior',
+  finish: 'Enviar'
+  },
+  toolbarSettings: {
+  toolbarPosition: 'bottom', // none, top, bottom, both
+  toolbarButtonPosition: 'left', // left, right, center
+  showNextButton: true, // show/hide a Next button
+  showPreviousButton: true, // show/hide a Previous button
+  toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
+  },
+  
+  });
+  
+
+  $('#smartwizard2').smartWizard({
+    theme: 'arrows',
+    autoAdjustHeight: false, // Automatically adjust content height
+    cycleSteps: false, // Allows to cycle the navigation of steps
+    backButtonSupport: true, // Enable the back button support
+    lang: { // Language variables for button
+    next: 'Próximo',
+    previous: 'Anterior',
+    finish: 'Enviar'
+    },
+    toolbarSettings: {
+    toolbarPosition: 'bottom', // none, top, bottom, both
+    toolbarButtonPosition: 'left', // left, right, center
+    showNextButton: true, // show/hide a Next button
+    showPreviousButton: true, // show/hide a Previous button
+    toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
+    },
+    
+    });
+
+
 $(document).ready(function(){
 $('.date').mask('00/00/0000');
 $('.time').mask('00:00:00');
