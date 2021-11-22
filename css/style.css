@@ -6,6 +6,8 @@ body{
 
 }
 
+
+
 *,
 :after,
 :before {
@@ -14,6 +16,21 @@ body{
   padding: 0;
   scroll-snap-type: y mandatory;
 }
+
+@media(max-width:762px){
+  *,
+  :after,
+  :before {
+    scroll-snap-type: none;
+  }
+
+  body{
+    
+    scroll-snap-type:none;
+
+}
+  
+} 
 
 .flexContainer{
   scroll-snap-align: start;
@@ -45,7 +62,7 @@ body{
 }
 
 .page2{
-    background-color: #fff;
+    background-color: #003b5c;
     /*min-height: 100%;*/
     /* background-image:  url("/imgs/bg4.jpg"); */
     background-size: cover;
@@ -53,7 +70,7 @@ body{
     background-repeat: no-repet;
     background-position: center center;
     height: 100vh; 
-    color: #454545;
+    color: #fff;
   
   
   
@@ -86,9 +103,17 @@ body{
 .page3{
   background-color: #fff;
   color: #454545;
+  font-size: 13px;
   
 }
 
+.fImovel{
+  font-weight: 900;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 0.2rem;
+}
 
 .botao {
     margin-top:20px;
@@ -126,11 +151,7 @@ body{
     
   }
 
- @media(max-width:762px){
-  .mobile{
-    display: none;
-  }
- } 
+
 
 
 
@@ -172,8 +193,13 @@ body{
     
   }
 
+  .setaDown a{
+    text-decoration:none;
+  }
+
   .bounce {
     animation: bounce 2s infinite 2s;
+    color: black;
   }
 
   .whatsIcon{ 

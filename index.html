@@ -54,7 +54,7 @@
     <section
       class="
         flexContainer
-        container-fluid
+        container
         page3
         align-content-center
         justify-content-center
@@ -62,7 +62,7 @@
       "
       id="section02"
     >
-      <div class="row d-flex justify-content-center align-items-center">
+      <div class="row d-flex justify-content-center align-items-center mb-4">
         <div class=" row col-md-6 wow fadeInLeft   justify-content-center align-items-center">
          <div class="col-sm-8 text-center mb-2"><img src="imgs/logomarca.png" class="img-responsive img-fluid"></div>
           <h2 class="bolder">Quem somos?</h2>
@@ -130,7 +130,7 @@
       <div class="setaDown">
       <p class="fw-bolder"></p>
       <div class="bounce"><a href="#section03" class=""
-      ><i class="fa fa-chevron-down fs-2 fs-bolder text-dark"></i
+      ><p class="fImovel">Nos fale sobre o seu Imóvel</p><i class="fa fa-chevron-down fs-2 fs-bolder text-dark"></i
     ></a></div></div>
     </section>
     <section class="flexContainer page2 container-fluid" id="section03">
@@ -139,24 +139,24 @@
         <h2 class="text-center tex-bolder mb-4 wow fadeIn" style="font-weight: 900;">Nos fale sobre o seu imóvel</h2>
 
         <form> 
-          <div class="col-md-12 wow fadeInRight ">
+          <div class="col-md-12 wow fadeInRight card ">
           
             <div class="  cardForm p-3 scroll-y"  >
               <div id="smartwizard">
                 <ul class="nav">
                    <li>
                        <a class="nav-link" href="#step-1">
-                         Perguntas Iniciais
+                        Condições do Imóvel
                        </a>
                    </li>
                    <li>
                        <a class="nav-link" href="#step-2">
-                          Dados do Imóvel
+                          Detalhes do Imóvel
                        </a>
                    </li>
                    <li>
                     <a class="nav-link inactive active" href="#step-3">
-                      Dados Pessoais
+                      Imagens e Anexos
                     </a>
                  </li>
                 </ul>
@@ -164,25 +164,21 @@
                 <div class="tab-content">
                    <div id="step-1" class="tab-pane" role="tabpanel">
                       <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label text-dark">Documentação ok?</label>
-                        <input type="hidden" id="on-off-switch-custom" class='botaoSwitch' name="on-off-switch-custom" value="0">
-                      </div>
-                      <div class="mb-3">
                         <label for="" class="form-label text-dark">Imóvel precisa de reformas?</label
                       >
                         <input type="hidden" id="on-off-switch-custom1" class='botaoSwitch' name="on-off-switch-custom" value="0">
         
                       </div>
                       <div class="mb-3">
-                        <label for="" class="form-label text-dark">Aceita permutas por outros imóveis?</label
+                        <label for="" class="form-label text-dark">O imóvel possui dívidas / débitos / pendências financeiras?</label
                       >
-                        <input type="hidden" id="on-off-switch-custom2" class='botaoSwitch' name="on-off-switch-custom" value="0">
+                        <input type="hidden" id="on-off-switch-custom3" class='botaoSwitch' name="on-off-switch-custom" value="0">
         
                       </div>
                       <div class="mb-3">
-                        <label for="" class="form-label text-dark">Imóvel possui débitos/dívidas/outros?</label
+                        <label for="" class="form-label text-dark">. O imóvel está com a matrícula atualizada??</label
                       >
-                        <input type="hidden" id="on-off-switch-custom3" class='botaoSwitch' name="on-off-switch-custom" value="0">
+                        <input type="hidden" id="on-off-switch-custom2" class='botaoSwitch' name="on-off-switch-custom" value="0">
         
                       </div>
                    </div>
@@ -197,14 +193,14 @@
                       </div>
                       <div class="col-md-6">
                         <div class="input-group mb-3 col-md-6">
-                          <label for="" class="form-label text-dark col-sm-12">Metragem do Imóvel</label>
+                          <label for="" class="form-label text-dark col-sm-12">Metragem de construção do Imóvel</label>
                           <input type="text" class="form-control  metragem" id="" aria-describedby="emailHelp">
                           <span class="input-group-text" id="basic-addon2">m²</span>
                         </div>
                      </div>
                       <div class="col-md-6">
                         <div class="input-group mb-3">
-                          <label for="" class="form-label text-dark col-sm-12">Metragem do Terreno</label>
+                          <label for="" class="form-label text-dark col-sm-12">Metragem do Terreno do Imóvel</label>
                           <input type="text" class="form-control  metragem" id="" aria-describedby="emailHelp">
                           <span class="input-group-text" id="basic-addon2">m²</span>
                         </div>
@@ -216,45 +212,38 @@
                         </div>
                       </div>
                       <div class="input-group mb-3">
+                        <label for="" class="form-label text-dark col-sm-12">Endereço</label>
+                        <input type="text" class="form-control " id="" aria-describedby="emailHelp">             
+                      </div>
+                      <div class="col-md-6">
+                      <div class="input-group mb-3">
                         <label for="" class="form-label text-dark col-sm-12">Nome do Condomínio/Residencial do Imóvel</label>
                         <input type="text" class="form-control " id="" aria-describedby="emailHelp">             
                       </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Observações Adicionais</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
+                    </div>
+                      <div class="col-md-6">
+                        <div class="input-group mb-3">
+                          <label for="" class="form-label text-dark col-sm-12">Telefone</label>
+                          <input type="text" class="form-control  phone_with_ddd" id="" aria-describedby="emailHelp">
+                        </div>
+                     </div>
+
                    </div>
                 </div>
                 <div id="step-3" class="tab-pane" role="tabpanel">
                   <div class="row ">
                     <div class="col-md-6">
-                      <div class="input-group mb-3">
-                        <label for="" class="form-label text-dark col-sm-12">Nome Completo</label>
-                        <input type="text" class="form-control  " id="" aria-describedby="emailHelp">
+                      <div class="mb-3">
+                        <label for="formFileMultiple" class="form-label">Coloque as Fotos do Imóvel</label>
+                        <input class="form-control" type="file" id="formFileMultipleFotos" multiple>
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div class="input-group mb-3 col-md-6">
-                        <label for="" class="form-label text-dark col-sm-12">Email</label>
-                        <input type="email" class="form-control  " id="" aria-describedby="emailHelp">
+                      <div class="mb-3">
+                        <label for="formFileMultiple" class="form-label">Coloque os Vídeos do Imóvel</label>
+                        <input class="form-control" type="file" id="formFileMultipleFotosVideos" multiple>
                       </div>
                    </div>
-                    <div class="col-md-6">
-                      <div class="input-group mb-3">
-                        <label for="" class="form-label text-dark col-sm-12">Telefone</label>
-                        <input type="text" class="form-control  phone_with_ddd" id="" aria-describedby="emailHelp">
-                      </div>
-                   </div>
-                    <div class="col-md-6">
-                      <div class="input-group mb-3">
-                        <label for="" class="form-label text-dark col-sm-12">Cidade</label>
-                        <input type="text" class="form-control " id="" aria-describedby="emailHelp">
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleFormControlTextarea1" class="form-label">Observações Adicionais</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
                     <div class="col-auto">
                       <!-- Submit button -->
                       <button type="submit" class="btn btn-primary mb-4">
@@ -269,7 +258,7 @@
      </form>
     </section>
 
-    <section class="flexContainer page2test container-fluid" id="section0">
+    <!-- <section class="flexContainer page2test container-fluid" id="section0">
       <div class=" row d-flex justify-content-center align-items-center col-sm-10">
         <h2 class="text-center tex-bolder mb-4 wow fadeIn" style="font-weight: 900;">Nos fale sobre o seu imóvel</h2>
 
@@ -391,7 +380,7 @@
                       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                     <div class="col-auto">
-                      <!-- Submit button -->
+                      
                       <button type="submit" class="btn btn-primary mb-4">
                         Enviar
                       </button>
@@ -403,9 +392,9 @@
       </div>
      </form>
       
-    </section>
+    </section> -->
     
-    <section class="flexContainer page2test2 container-fluid" id="section04">
+    <!-- <section class="flexContainer page2test2 container-fluid" id="section04">
       <div class=" row d-flex justify-content-center align-items-center col-sm-10">
         <h2 class="text-center tex-bolder mb-4 wow fadeIn" style="font-weight: 900;">Nos fale sobre o seu imóvel</h2>
 
@@ -527,7 +516,7 @@
                       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                     <div class="col-auto">
-                      <!-- Submit button -->
+                    
                       <button type="submit" class="btn btn-primary mb-4">
                         Enviar
                       </button>
@@ -539,7 +528,7 @@
       </div>
      </form>
       
-     </section>
+     </section> -->
 
     <!-- Footer -->
     <footer class="bg-dark text-center w-100">
