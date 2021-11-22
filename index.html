@@ -25,6 +25,11 @@
   />
   <link href="/plugins/css/smart_wizard_all.css" rel="stylesheet" type="text/css" />
   <script src="https://use.fontawesome.com/0b0d86c63d.js"></script>
+
+  <script src="https://unpkg.com/@yaireo/tagify"></script>
+  <script src="https://unpkg.com/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+  <link href="https://unpkg.com/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+
     <title>Compro o seu imóvel em condomínio.</title>
   </head>
   <body>
@@ -138,7 +143,7 @@
       <div class="row d-flex justify-content-center align-items-center col-sm-10">
         <h2 class="text-center tex-bolder mb-4 wow fadeIn" style="font-weight: 900;">Nos fale sobre o seu imóvel</h2>
 
-        <form> 
+        <form id="formCadastro" name="formCadastro"> 
           <div class="col-md-12 wow fadeInRight card overflow-auto">
           
             <div class="  cardForm p-3 scroll-y"  >
@@ -276,9 +281,7 @@
                         <div data-repeater-list="kt_docs_repeater_basic">
                             <div data-repeater-item class="form-group row ">
                                 <div class="col-md- mb-4">
-                                  <input type="text" class="form-control mb-2" placeholder="" />
-                                  <input type="text" class="form-control mb-2" placeholder="" />
-                                  <input type="text" class="form-control mb-2" placeholder="" />
+                                  <input class="form-control form-control-sm form-control-solid" value="" id="kt_tagify_3"/>
                                 </div>
 
                             </div>
@@ -291,11 +294,8 @@
                         <div data-repeater-list="kt_docs_repeater_basic">
                             <div data-repeater-item class="form-group row ">
                                 <div class="col-md- mb-4">
-                                  <input type="text" class="form-control mb-2" placeholder="" />
-                                  <input type="text" class="form-control mb-2" placeholder="" />
-                                  <input type="text" class="form-control mb-2 " placeholder="" />
-                                </div>
-
+                                  <input class="form-control form-control-lg form-control-solid" value="" id="kt_tagify_5"/>
+                                </div> 
                             </div>
                         </div>
                     </div>
@@ -597,7 +597,7 @@
       <!-- Grid container -->
       <div class="container-fluid p-4">
         <div class="row d-flex align-items-center">
-        <div class="col-md-3">
+        <div class="col-md-3 ">
           <img src="imgs/Ativo 1.png"  class="img-responsive img-fluid"alt="logoFooter">
         </div>
         <!-- Section: Social media -->

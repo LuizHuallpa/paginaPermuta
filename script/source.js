@@ -145,3 +145,33 @@ $('#kt_docs_repeater_basic1').repeater({
       $(this).slideUp(deleteElement);
   }
 });
+
+
+// The DOM elements you wish to replace with Tagify
+var input1 = document.querySelector("#kt_tagify_3");
+var input2 = document.querySelector("#kt_tagify_4");
+var input2 = document.querySelector("#kt_tagify_5");
+
+// Initialize Tagify components on the above inputs
+new Tagify(input1,{
+  delimiters       : null,
+  callbacks        : {
+      add    : console.log,  // callback when adding a tag
+      remove : console.log   // callback when removing a tag
+  }
+});
+
+new Tagify(input2,{
+  delimiters       : null,
+  callbacks        : {
+      add    : console.log,  // callback when adding a tag
+      remove : console.log   // callback when removing a tag
+  }
+});
+new Tagify(input3,{
+  delimiters       : null,
+  callbacks        : {
+      add    : console.log,  // callback when adding a tag
+      remove : console.log   // callback when removing a tag
+  }
+});
