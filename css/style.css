@@ -307,3 +307,7 @@ ul.timeline > li:before {
 textarea {
   resize: none;
 }
+
+label{
+  color: black;
+}

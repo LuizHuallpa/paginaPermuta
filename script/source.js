@@ -58,7 +58,7 @@ $('#smartwizard1').smartWizard({
 
   $('#smartwizard2').smartWizard({
     theme: 'arrows',
-    autoAdjustHeight: false, // Automatically adjust content height
+    autoAdjustHeight: true, // Automatically adjust content height
     cycleSteps: false, // Allows to cycle the navigation of steps
     backButtonSupport: true, // Enable the back button support
     lang: { // Language variables for button
@@ -113,3 +113,35 @@ translation: {
 $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
 });
 
+$('#kt_docs_repeater_basic').repeater({
+  initEmpty: false,
+
+  defaultValues: {
+      'text-input': 'foo'
+  },
+
+  show: function () {
+      $(this).slideDown();
+  },
+
+  hide: function (deleteElement) {
+      $(this).slideUp(deleteElement);
+  }
+});
+
+
+$('#kt_docs_repeater_basic1').repeater({
+  initEmpty: false,
+
+  defaultValues: {
+      'text-input': 'foo'
+  },
+
+  show: function () {
+      $(this).slideDown();
+  },
+
+  hide: function (deleteElement) {
+      $(this).slideUp(deleteElement);
+  }
+});
