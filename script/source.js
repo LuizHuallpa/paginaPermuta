@@ -130,9 +130,14 @@ $('#kt_docs_repeater_basic').repeater({
 });
 
 
-
-
+var countLiVideos = 0
+var countLiFotos = 0
 var contadorListaFotos = 0
+var spanFotos = document.getElementById("contagemFotos")
+
+var countLiVideos = 0
+var spanVideos = document.getElementById("contagemVideos")
+
 const adicionar = () => {
   let anchor = document.createElement('a');
   anchor.setAttribute('target', '_blank');
@@ -157,15 +162,18 @@ const adicionar = () => {
 }
   contadorListaFotos ++
   var liFotos = document.getElementById("linksListFotos").getElementsByTagName("li");
-  var countLiFotos = liFotos.length
-  var spanFotos = document.getElementById("contagemFotos")
-  spanFotos.innerHTML = countLiFotos ; 
+  countLiFotos = liFotos.length
+  
+  spanFotos.innerHTML = countLiFotos 
 };
 
 function removeListFotos(id){
   var id = id.split('_')[1]
   let el = document.getElementById('li_'+id)
   el.remove()
+  countLiFotos--
+  spanFotos.innerHTML = countLiFotos 
+
 }
 
 
@@ -194,8 +202,8 @@ const adicionarVideos = () => {
 }
   contadorListaVideos ++
   var liVideos = document.getElementById("linksListVideos").getElementsByTagName("li");
-  var countLiVideos = liVideos.length
-  var spanVideos = document.getElementById("contagemVideos")
+   countLiVideos = liVideos.length
+  
   spanVideos.innerHTML = countLiVideos ; 
   
 };
@@ -204,6 +212,9 @@ function removeListVideos(id){
   var id = id.split('_')[1]
   let el = document.getElementById('li_'+id)
   el.remove()
+  countLiVideos--
+  spanVideos.innerHTML = countLiVideos ;
+
 }
 
 
