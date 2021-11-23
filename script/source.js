@@ -129,49 +129,67 @@ $('#kt_docs_repeater_basic').repeater({
   }
 });
 
+var contadorListaFotos = 0
+const adicionar = () => {
+  let anchor = document.createElement('a');
+  anchor.setAttribute('target', '_blank');
+  anchor.id = 'linkFoto_'+contadorListaFotos
+  let list = document.getElementById('linksList');
+  let li = document.createElement('li');
+  li.id = 'li_'+contadorListaFotos
+  let btn = document.createElement("button");  
+  btn.innerHTML = "x";  
+  btn.setAttribute('class', 'btn btn-danger ms-2 p-1');
+  btn.id = 'btn_'+contadorListaFotos
+  btn.setAttribute('onclick', 'removeListFotos(this.id)');
+  let urlFoto = document.querySelector("#fotos").value
+  let descricao = document.querySelector("#descricaoFotos").value
+  if(urlFoto != '' && descricao != ''){
+    anchor.href = urlFoto;
+    anchor.innerText = descricao;
+    li.append(anchor,btn);
+    list.appendChild(li);
+    document.querySelector("#fotos").value = ''
+    document.querySelector("#descricaoFotos").value = ''
+}
+  contadorListaFotos ++
+};
 
-$('#kt_docs_repeater_basic1').repeater({
-  initEmpty: false,
-
-  defaultValues: {
-      'text-input': 'foo'
-  },
-
-  show: function () {
-      $(this).slideDown();
-  },
-
-  hide: function (deleteElement) {
-      $(this).slideUp(deleteElement);
-  }
-});
+function removeListFotos(id){
+  var id = id.split('_')[1]
+  let el = document.getElementById('li_'+id)
+  el.remove()
+}
 
 
-// The DOM elements you wish to replace with Tagify
-var input1 = document.querySelector("#kt_tagify_3");
-var input2 = document.querySelector("#kt_tagify_4");
-var input2 = document.querySelector("#kt_tagify_5");
+var contadorListaVideos = 0
+const adicionarVideos = () => {
+  let anchor = document.createElement('a');
+  anchor.setAttribute('target', '_blank');
+  anchor.id = 'linkFoto_'+contadorListaVideos
+  let list = document.getElementById('linksListVideos');
+  let li = document.createElement('li');
+  li.id = 'li_'+contadorListaVideos
+  let btn = document.createElement("button");  
+  btn.innerHTML = "x";  
+  btn.setAttribute('class', 'btn btn-danger ms-2 p-1');
+  btn.id = 'btn_'+contadorListaVideos
+  btn.setAttribute('onclick', 'removeListVideos(this.id)');
+  let urlFoto = document.querySelector("#Videos").value
+  let descricao = document.querySelector("#descricaoVideos").value
+  if(urlFoto != '' && descricao != ''){
+    anchor.href = urlFoto;
+    anchor.innerText = descricao;
+    li.append(anchor,btn);
+    list.appendChild(li);
+    document.querySelector("#Videos").value = ''
+    document.querySelector("#descricaoVideos").value = ''
+}
+  contadorListaVideos ++
+};
 
-// Initialize Tagify components on the above inputs
-new Tagify(input1,{
-  delimiters       : null,
-  callbacks        : {
-      add    : console.log,  // callback when adding a tag
-      remove : console.log   // callback when removing a tag
-  }
-});
-
-new Tagify(input2,{
-  delimiters       : null,
-  callbacks        : {
-      add    : console.log,  // callback when adding a tag
-      remove : console.log   // callback when removing a tag
-  }
-});
-new Tagify(input3,{
-  delimiters       : null,
-  callbacks        : {
-      add    : console.log,  // callback when adding a tag
-      remove : console.log   // callback when removing a tag
-  }
-});
+function removeListVideos(id){
+  var id = id.split('_')[1]
+  let el = document.getElementById('li_'+id)
+  el.remove()
+}

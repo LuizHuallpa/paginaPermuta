@@ -69,20 +69,7 @@
     >
       <div class="row d-flex justify-content-center align-items-center mb-4">
         <div class=" row col-md-6 wow fadeInLeft   justify-content-center align-items-center">
-         <div class="col-sm-8 text-center mb-2"><img src="imgs/logomarca.png" class="img-responsive img-fluid"></div>
-          <h2 class="bolder">Quem somos?</h2>
-          <p>
-            A HBR Invest nasceu em 2009, a partir da aquisição de imóveis para
-            locações. Com a atuação incansável da nossa equipe, novos caminhos e
-            novas oportunidades levaram, dois anos depois, à expansão de nossas
-            atividades, com início do segmento de incorporações imobiliárias.
-            Sempre focados no desenvolvimento das regiões por onde passamos e no
-            crescimento de nossos parceiros, atuamos estrategicamente na
-            incorporação e análise de áreas e seu potencial de retorno do
-            investimento. Em 2018, atingimos a marca de aproximadamente R$ 500
-            milhões em projetos próprios e pretendemos seguir em frente,
-            avançando pelo nosso desenvolvimento e para o seu sucesso.
-          </p>
+         <div class="col-sm-8 text-center mb-2"><img src="imgs/InvestAzulVertical-01.png" class="img-responsive img-fluid"></div>
           <div class="mt-5">
             <a
               type="button"
@@ -126,11 +113,7 @@
                   </li>
                 </ul>
               </div>
-
-            </div>
-      
-          
-         
+            </div>    
       </div>
       <div class="setaDown">
       <p class="fw-bolder"></p>
@@ -275,323 +258,105 @@
                   </div>
                 <div id="step-4" class="tab-pane" role="tabpanel">
                   <div class="row">
-                  <div id="" class="col-md-12">
-                    <div class="form-group">
-                      <label class="form-label">URL das fotos do Imóvel:</label>
-                        <div data-repeater-list="kt_docs_repeater_basic">
-                            <div data-repeater-item class="form-group row ">
-                                <div class="col-md- mb-4">
-                                  <input class="form-control form-control-lg form-control-solid" value="" id="kt_tagify_3"/>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div id="" class="col-md-12">
-                    <div class="form-group">
-                      <label class="form-label">URL dos Vídeos do Imóvel:</label>
-                        <div data-repeater-list="kt_docs_repeater_basic">
-                            <div data-repeater-item class="form-group row ">
-                                <div class="col-md- mb-4">
-                                  <input class="form-control form-control-lg form-control-solid" value="" id="kt_tagify_5"/>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-           
-              
-                  </div>
-
-
-                
-                    <div class="col-auto">
-                      <!-- Submit button -->
-                      <button type="submit" class="btn btn-primary mb-4">
-                        Enviar
+                  <div id="" class="col-md-12 row">
+                    <div class="form-group col-md-6 mt-4">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-warning mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Adicionar fotos
                       </button>
-                    </div>
 
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title " id="exampleModalLabel">Adicione aqui a sua foto</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="form-group">
+                                  <label class="form-label">URL das fotos do Imóvel:</label>
+                                    <div data-repeater-list="kt_docs_repeater_basic">
+                                        <div data-repeater-item class="form-group row ">
+                                            <div class="mb-4">
+                                              <input class="form-control form-control-solid " id="fotos" value="" required/>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <label class="form-label">Descrição:</label>
+                                    
+                     
+                                            <div class="mb-4">
+                                              <input class="form-control form-control-solid " id="descricaoFotos" value="" required/>
+                                            </div> 
+                                     
+                                    
+                                </div>
+                                <div id="app">
+                                  <ul id="linksList"></ul>
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button type="button" id="adicionarFoto" type="submit" class="btn btn-primary" onclick="adicionar()">Adicionar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>                  
+                    </div>
+                    <div class="form-group mt-4 col-md-6">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-warning mb-2" data-bs-toggle="modal" data-bs-target="#ModalVideos">
+                        Adicionar Videos
+                      </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="ModalVideos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title " id="exampleModalLabel">Adicione aqui a sua foto</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="form-group">
+                                  <label class="form-label">URL das Videos do Imóvel:</label>
+                                      <div class="mb-4">
+                                        <input class="form-control form-control-solid " id="Videos" value="" required/>
+                                      </div> 
+                                    </div>
+                                    <label class="form-label">Descrição:</label>
+                                    <div class="mb-4">
+                                      <input class="form-control form-control-solid " id="descricaoVideos" value="" required/>
+                                    </div>                    
+                                </div>
+                                <div id="appVideo">
+                                  <ul id="linksListVideos"></ul>
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button type="button" id="adicionarFoto" type="submit" class="btn btn-primary" onclick="adicionarVideos()">Adicionar</button>
+                              </div>
+                            </div>
+                          </div>
+                    </div>                 
+                    </div>
+                  </div>
+                  <div class="col-auto mt-8" style='margin-top: 40px;'>
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary mb-4">
+                      Enviar
+                    </button>
+                  </div>
+                  </div>
+                  </div>           
                  </div>
               </div>           
          </div>    
       </div>
      </form>
     </section>
-
-    <!-- <section class="flexContainer page2test container-fluid" id="section0">
-      <div class=" row d-flex justify-content-center align-items-center col-sm-10">
-        <h2 class="text-center tex-bolder mb-4 wow fadeIn" style="font-weight: 900;">Nos fale sobre o seu imóvel</h2>
-
-        <form> 
-          <div class="col-md-12 wow fadeInRight card p-1 ">
-          
-            <div class="  cardForm p-3 scroll-y "  >
-              <div id="smartwizard1">
-                <ul class="nav">
-                   <li>
-                       <a class="nav-link" href="#step-1">
-                         Perguntas Iniciais
-                       </a>
-                   </li>
-                   <li>
-                       <a class="nav-link" href="#step-2">
-                          Dados do Imóvel
-                       </a>
-                   </li>
-                   <li>
-                    <a class="nav-link inactive active" href="#step-3">
-                      Dados Pessoais
-                    </a>
-                 </li>
-                </ul>
-             
-                <div class="tab-content">
-                   <div id="step-1" class="tab-pane" role="tabpanel">
-                      <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label text-dark">Documentação ok?</label>
-                        <input type="hidden" id="on-off-switch-sec4" class='botaoSwitch' name="on-off-switch-sec4" value="0">
-                      </div>
-                      <div class="mb-3">
-                        <label for="" class="form-label text-dark">Imóvel precisa de reformas?</label
-                      >
-                        <input type="hidden" id="on-off-switch-sec41" class='botaoSwitch' name="on-off-switch-sec4" value="0">
-        
-                      </div>
-                      <div class="mb-3">
-                        <label for="" class="form-label text-dark">Aceita permutas por outros imóveis?</label
-                      >
-                        <input type="hidden" id="on-off-switch-sec42" class='botaoSwitch' name="on-off-switch-sec4" value="0">
-        
-                      </div>
-                      <div class="mb-3">
-                        <label for="" class="form-label text-dark">Imóvel possui débitos/dívidas/outros?</label
-                      >
-                        <input type="hidden" id="on-off-switch-sec43" class='botaoSwitch' name="on-off-switch-sec4" value="0">
-        
-                      </div>
-                   </div>
-                   <div id="step-2" class="tab-pane" role="tabpanel">
-                    <div class="row ">
-                      <div class="col-md-6">
-                        <div class="input-group mb-3">
-                          <label for="" class="form-label text-dark col-sm-12">Valor do imóvel</label>
-                          <span class="input-group-text" id="basic-addon1">R$</span>
-                          <input type="text" class="form-control  money2" id="" aria-describedby="emailHelp">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="input-group mb-3 col-md-6">
-                          <label for="" class="form-label text-dark col-sm-12">Metragem do Imóvel</label>
-                          <input type="text" class="form-control  metragem" id="" aria-describedby="emailHelp">
-                          <span class="input-group-text" id="basic-addon2">m²</span>
-                        </div>
-                     </div>
-                      <div class="col-md-6">
-                        <div class="input-group mb-3">
-                          <label for="" class="form-label text-dark col-sm-12">Metragem do Terreno</label>
-                          <input type="text" class="form-control  metragem" id="" aria-describedby="emailHelp">
-                          <span class="input-group-text" id="basic-addon2">m²</span>
-                        </div>
-                     </div>
-                      <div class="col-md-6">
-                        <div class="input-group mb-3">
-                          <label for="" class="form-label text-dark col-sm-12">Cidade</label>
-                          <input type="text" class="form-control " id="" aria-describedby="emailHelp">
-                        </div>
-                      </div>
-                      <div class="input-group mb-3">
-                        <label for="" class="form-label text-dark col-sm-12">Nome do Condomínio/Residencial do Imóvel</label>
-                        <input type="text" class="form-control " id="" aria-describedby="emailHelp">             
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Observações Adicionais</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
-                   </div>
-                </div>
-                <div id="step-3" class="tab-pane" role="tabpanel">
-                  <div class="row ">
-                    <div class="col-md-6">
-                      <div class="input-group mb-3">
-                        <label for="" class="form-label text-dark col-sm-12">Nome Completo</label>
-                        <input type="text" class="form-control  " id="" aria-describedby="emailHelp">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-group mb-3 col-md-6">
-                        <label for="" class="form-label text-dark col-sm-12">Email</label>
-                        <input type="email" class="form-control  " id="" aria-describedby="emailHelp">
-                      </div>
-                   </div>
-                    <div class="col-md-6">
-                      <div class="input-group mb-3">
-                        <label for="" class="form-label text-dark col-sm-12">Telefone</label>
-                        <input type="text" class="form-control  phone_with_ddd" id="" aria-describedby="emailHelp">
-                      </div>
-                   </div>
-                    <div class="col-md-6">
-                      <div class="input-group mb-3">
-                        <label for="" class="form-label text-dark col-sm-12">Cidade</label>
-                        <input type="text" class="form-control " id="" aria-describedby="emailHelp">
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleFormControlTextarea1" class="form-label">Observações Adicionais</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <div class="col-auto">
-                      
-                      <button type="submit" class="btn btn-primary mb-4">
-                        Enviar
-                      </button>
-                    </div>
-
-                 </div>
-              </div>           
-         </div>    
-      </div>
-     </form>
-      
-    </section> -->
-    
-    <!-- <section class="flexContainer page2test2 container-fluid" id="section04">
-      <div class=" row d-flex justify-content-center align-items-center col-sm-10">
-        <h2 class="text-center tex-bolder mb-4 wow fadeIn" style="font-weight: 900;">Nos fale sobre o seu imóvel</h2>
-
-        <form> 
-          <div class="col-md-12 wow fadeInRight ">
-          
-            <div class="  cardForm p-3 scroll-y card"  >
-              <div id="smartwizard2">
-                <ul class="nav">
-                   <li>
-                       <a class="nav-link" href="#step-1">
-                         Perguntas Iniciais
-                       </a>
-                   </li>
-                   <li>
-                       <a class="nav-link" href="#step-2">
-                          Dados do Imóvel
-                       </a>
-                   </li>
-                   <li>
-                    <a class="nav-link inactive active" href="#step-3">
-                      Dados Pessoais
-                    </a>
-                 </li>
-                </ul>
-             
-                <div class="tab-content">
-                   <div id="step-1" class="tab-pane" role="tabpanel">
-                      <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label text-dark">Documentação ok?</label>
-                        <input type="hidden" id="on-off-switch-sec5" class='botaoSwitch' name="on-off-switch-sec5" value="0">
-                      </div>
-                      <div class="mb-3">
-                        <label for="" class="form-label text-dark">Imóvel precisa de reformas?</label
-                      >
-                        <input type="hidden" id="on-off-switch-sec51" class='botaoSwitch' name="on-off-switch-sec5" value="0">
-        
-                      </div>
-                      <div class="mb-3">
-                        <label for="" class="form-label text-dark">Aceita permutas por outros imóveis?</label
-                      >
-                        <input type="hidden" id="on-off-switch-sec52" class='botaoSwitch' name="on-off-switch-sec5" value="0">
-        
-                      </div>
-                      <div class="mb-3">
-                        <label for="" class="form-label text-dark">Imóvel possui débitos/dívidas/outros?</label
-                      >
-                        <input type="hidden" id="on-off-switch-sec53" class='botaoSwitch' name="on-off-switch-sec5" value="0">
-        
-                      </div>
-                   </div>
-                   <div id="step-2" class="tab-pane" role="tabpanel">
-                    <div class="row ">
-                      <div class="col-md-6">
-                        <div class="input-group mb-3">
-                          <label for="" class="form-label text-dark col-sm-12">Valor do imóvel</label>
-                          <span class="input-group-text" id="basic-addon1">R$</span>
-                          <input type="text" class="form-control  money2" id="" aria-describedby="emailHelp">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="input-group mb-3 col-md-6">
-                          <label for="" class="form-label text-dark col-sm-12">Metragem do Imóvel</label>
-                          <input type="text" class="form-control  metragem" id="" aria-describedby="emailHelp">
-                          <span class="input-group-text" id="basic-addon2">m²</span>
-                        </div>
-                     </div>
-                      <div class="col-md-6">
-                        <div class="input-group mb-3">
-                          <label for="" class="form-label text-dark col-sm-12">Metragem do Terreno</label>
-                          <input type="text" class="form-control  metragem" id="" aria-describedby="emailHelp">
-                          <span class="input-group-text" id="basic-addon2">m²</span>
-                        </div>
-                     </div>
-                      <div class="col-md-6">
-                        <div class="input-group mb-3">
-                          <label for="" class="form-label text-dark col-sm-12">Cidade</label>
-                          <input type="text" class="form-control " id="" aria-describedby="emailHelp">
-                        </div>
-                      </div>
-                      <div class="input-group mb-3">
-                        <label for="" class="form-label text-dark col-sm-12">Nome do Condomínio/Residencial do Imóvel</label>
-                        <input type="text" class="form-control " id="" aria-describedby="emailHelp">             
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Observações Adicionais</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
-                   </div>
-                </div>
-                <div id="step-3" class="tab-pane" role="tabpanel">
-                  <div class="row ">
-                    <div class="col-md-6">
-                      <div class="input-group mb-3">
-                        <label for="" class="form-label text-dark col-sm-12">Nome Completo</label>
-                        <input type="text" class="form-control  " id="" aria-describedby="emailHelp">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-group mb-3 col-md-6">
-                        <label for="" class="form-label text-dark col-sm-12">Email</label>
-                        <input type="email" class="form-control  " id="" aria-describedby="emailHelp">
-                      </div>
-                   </div>
-                    <div class="col-md-6">
-                      <div class="input-group mb-3">
-                        <label for="" class="form-label text-dark col-sm-12">Telefone</label>
-                        <input type="text" class="form-control  phone_with_ddd" id="" aria-describedby="emailHelp">
-                      </div>
-                   </div>
-                    <div class="col-md-6">
-                      <div class="input-group mb-3">
-                        <label for="" class="form-label text-dark col-sm-12">Cidade</label>
-                        <input type="text" class="form-control " id="" aria-describedby="emailHelp">
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleFormControlTextarea1" class="form-label">Observações Adicionais</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <div class="col-auto">
-                    
-                      <button type="submit" class="btn btn-primary mb-4">
-                        Enviar
-                      </button>
-                    </div>
-
-                 </div>
-              </div>           
-         </div>    
-      </div>
-     </form>
-      
-     </section> -->
-
     <!-- Footer -->
     <footer class="bg-dark text-center w-100">
       <!-- Grid container -->
