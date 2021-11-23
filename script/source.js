@@ -129,12 +129,15 @@ $('#kt_docs_repeater_basic').repeater({
   }
 });
 
+
+
+
 var contadorListaFotos = 0
 const adicionar = () => {
   let anchor = document.createElement('a');
   anchor.setAttribute('target', '_blank');
   anchor.id = 'linkFoto_'+contadorListaFotos
-  let list = document.getElementById('linksList');
+  let list = document.getElementById('linksListFotos');
   let li = document.createElement('li');
   li.id = 'li_'+contadorListaFotos
   let btn = document.createElement("button");  
@@ -153,6 +156,10 @@ const adicionar = () => {
     document.querySelector("#descricaoFotos").value = ''
 }
   contadorListaFotos ++
+  var liFotos = document.getElementById("linksListFotos").getElementsByTagName("li");
+  var countLiFotos = liFotos.length
+  var spanFotos = document.getElementById("contagemFotos")
+  spanFotos.innerHTML = countLiFotos ; 
 };
 
 function removeListFotos(id){
@@ -186,6 +193,11 @@ const adicionarVideos = () => {
     document.querySelector("#descricaoVideos").value = ''
 }
   contadorListaVideos ++
+  var liVideos = document.getElementById("linksListVideos").getElementsByTagName("li");
+  var countLiVideos = liVideos.length
+  var spanVideos = document.getElementById("contagemVideos")
+  spanVideos.innerHTML = countLiVideos ; 
+  
 };
 
 function removeListVideos(id){
@@ -193,3 +205,5 @@ function removeListVideos(id){
   let el = document.getElementById('li_'+id)
   el.remove()
 }
+
+
