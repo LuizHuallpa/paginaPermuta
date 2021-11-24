@@ -159,25 +159,25 @@
                       <div class="mb-3">
                         <label for="" class="form-label text-dark">Imóvel precisa de reformas?</label
                       >
-                        <input type="hidden" id="on-off-switch-custom1" class='botaoSwitch' name="on-off-switch-custom" value="0">
+                        <input type="hidden" id="on-off-switch-custom1" class='botaoSwitch' name="switch-reformas" value="0">
         
                       </div>
                       <div class="mb-3">
                         <label for="" class="form-label text-dark">O imóvel possui dívidas / débitos / pendências financeiras?</label
                       >
-                        <input type="hidden" id="on-off-switch-custom3" class='botaoSwitch' name="on-off-switch-custom" value="0">
+                        <input type="hidden" id="on-off-switch-custom3" class='botaoSwitch' name="switch-dividas" value="0">
         
                       </div>
                       <div class="mb-3">
                         <label for="" class="form-label text-dark">O imóvel está com a matrícula atualizada?</label
                       >
-                        <input type="hidden" id="on-off-switch-custom2" class='botaoSwitch' name="on-off-switch-custom" value="0">
+                        <input type="hidden" id="on-off-switch-custom2" class='botaoSwitch' name="switch-matricula" value="0">
         
                       </div>
                       <div class="mb-3">
-                        <label for="" class="form-label text-dark">O imóvel possui dívidas / débitos / pendências financeiras?</label
+                        <label for="" class="form-label text-dark">Aceita permuta por outros imóveis gerando renda mensal?</label
                       >
-                        <input type="hidden" id="on-off-switch-custom4" class='botaoSwitch' name="on-off-switch-custom" value="0">
+                        <input type="hidden" id="on-off-switch-custom4" class='botaoSwitch' name="switch-permuta" value="0">
         
                       </div>
                    </div>
@@ -188,37 +188,37 @@
                         <div class="input-group mb-3">
                           <label for="" class="form-label text-dark col-sm-12">Valor do imóvel</label>
                           <span class="input-group-text" id="basic-addon1">R$</span>
-                          <input type="text" class="form-control  money2" id="" aria-describedby="emailHelp">
+                          <input type="text" class="form-control  money2" name="valor" id="" >
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="input-group mb-3 col-md-6">
                           <label for="" class="form-label text-dark col-sm-12">Metragem de construção do Imóvel</label>
-                          <input type="text" class="form-control  metragem" id="" aria-describedby="emailHelp">
+                          <input type="text" class="form-control  metragem" name="metragemConstrucao" id="" >
                           <span class="input-group-text" id="basic-addon2">m²</span>
                         </div>
                      </div>
                       <div class="col-md-6">
                         <div class="input-group mb-3">
                           <label for="" class="form-label text-dark col-sm-12">Metragem do Terreno do Imóvel</label>
-                          <input type="text" class="form-control  metragem" id="" aria-describedby="emailHelp">
+                          <input type="text" class="form-control  metragem" name="metragemTerreno" id="">
                           <span class="input-group-text" id="basic-addon2">m²</span>
                         </div>
                      </div>
                       <div class="col-md-6">
                         <div class="input-group mb-3">
                           <label for="" class="form-label text-dark col-sm-12">Cidade</label>
-                          <input type="text" class="form-control " id="" aria-describedby="emailHelp">
+                          <input type="text" class="form-control " name="cidade" id="" >
                         </div>
                       </div>
                       <div class="input-group mb-3">
                         <label for="" class="form-label text-dark col-sm-12">Endereço</label>
-                        <input type="text" class="form-control " id="" aria-describedby="emailHelp">             
+                        <input type="text" class="form-control " id="" name="endereco" >             
                       </div>
                       <div class="col-md-12">
                       <div class="input-group mb-3">
                         <label for="" class="form-label text-dark col-sm-12">Nome do Condomínio/Residencial do Imóvel</label>
-                        <input type="text" class="form-control " id="" aria-describedby="emailHelp">             
+                        <input type="text" class="form-control " id="" name="condominio" >             
                       </div>
                     </div>
 
@@ -229,30 +229,30 @@
                     <div class="col-md-6">
                       <div class="input-group mb-3">
                         <label for="" class="form-label text-dark col-sm-12">Nome Completo</label>
-                        <input type="text" class="form-control  " id="" aria-describedby="emailHelp">
+                        <input type="text" class="form-control  " id="" name="nome">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="input-group mb-3 col-md-6">
                         <label for="" class="form-label text-dark col-sm-12">Email</label>
-                        <input type="email" class="form-control  " id="" aria-describedby="emailHelp">
+                        <input type="email" class="form-control  " name="email" id="" >
                       </div>
                    </div>
                     <div class="col-md-6">
                       <div class="input-group mb-3">
                         <label for="" class="form-label text-dark col-sm-12">Telefone</label>
-                        <input type="text" class="form-control  phone_with_ddd" id="" aria-describedby="emailHelp">
+                        <input type="text" class="form-control  phone_with_ddd" name="telefone" id="" >
                       </div>
                    </div>
                    <div class="col-md-6">
                     <div class="input-group mb-3">
                       <label for="" class="form-label text-dark col-sm-12">Celular/WhatsApp</label>
-                      <input type="text" class="form-control  phone_with_ddd" id="" aria-describedby="emailHelp">
+                      <input type="text" class="form-control  phone_with_ddd" id="" name="celular" >
                     </div>
                  </div>
                     <div class="mb-3">
                       <label for="exampleFormControlTextarea1" class="form-label">Observações Adicionais</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" name="observacoes" rows="3"></textarea>
                     </div>
                   </div>
                   </div>
@@ -268,7 +268,7 @@
                       <span id="contagemFotos" class="spamContagem text-center  col-sm-1 mb-2 p-2">0</span>
                     </div>
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -339,8 +339,7 @@
                                 <button type="button" id="adicionarVoto" type="submit" class="btn btn-primary" onclick="adicionarVideos()">Adicionar</button>
                               </div>
                             </div>
-                          </div>
-              
+                          </div> 
                     </div>
                   </div>
                   <div class="col-auto mt-8" style='margin-top: 40px;'>

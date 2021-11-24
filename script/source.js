@@ -130,18 +130,27 @@ $('#kt_docs_repeater_basic').repeater({
 });
 
 
+var objVideos = {}, videos = [];
+objVideos.descricao = 'oi';
+objVideos.url = 'www';
+// videos = objVideos;
+console.log(objVideos)
+
+
+
+
 var countLiVideos = 0
 var countLiFotos = 0
 var contadorListaFotos = 0
 var spanFotos = document.getElementById("contagemFotos")
-
 var countLiVideos = 0
 var spanVideos = document.getElementById("contagemVideos")
 
 const adicionar = () => {
   let anchor = document.createElement('a');
   anchor.setAttribute('target', '_blank');
-  anchor.id = 'linkFoto_'+contadorListaFotos
+  anchor.id = 'linkFoto_'+contadorListaFotos;
+  anchor.setAttribute('name', 'linkFoto_'+contadorListaFotos);
   let list = document.getElementById('linksListFotos');
   let li = document.createElement('li');
   li.id = 'li_'+contadorListaFotos
@@ -181,7 +190,8 @@ var contadorListaVideos = 0
 const adicionarVideos = () => {
   let anchor = document.createElement('a');
   anchor.setAttribute('target', '_blank');
-  anchor.id = 'linkFoto_'+contadorListaVideos
+  anchor.id = 'linkFoto_'+contadorListaVideos;
+  anchor.setAttribute('name', 'linkFoto_'+contadorListaVideos);
   let list = document.getElementById('linksListVideos');
   let li = document.createElement('li');
   li.id = 'li_'+contadorListaVideos
@@ -218,3 +228,29 @@ function removeListVideos(id){
 }
 
 
+$('form').submit(function (e) {
+  var data;
+
+  data = new FormData();
+
+  $.ajax({
+      url: '',
+      data: data,
+      processData: false,
+      type: 'POST',
+
+      // This will override the content type header, 
+      // regardless of whether content is actually sent.
+      // Defaults to 'application/x-www-form-urlencoded'
+      contentType: 'multipart/form-data', 
+
+
+      // Now you should be able to do this:
+      mimeType: 'multipart/form-data',    //Property added in 1.5.1
+
+      success: function (data) {
+          alert(data);
+      }
+  });
+  e.preventDefault();
+});
