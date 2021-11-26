@@ -232,12 +232,12 @@
 }
 
 .sw-theme-arrows .toolbar > .btn {
-  color: #ffffff;
+  color: white;
   background-color: #003b5c;
   border: 1px solid #003b5c;
   padding: .375rem .75rem;
   border-radius: .25rem;
-  font-weight: 400;
+  font-weight: 800;
 }
 
 .sw-theme-arrows > .nav {
@@ -302,13 +302,14 @@
 
 .sw-theme-arrows > .nav .nav-link.active {
   color: #ffffff;
-  border-color: #5bc0de;
-  background: #5bc0de;
+  border-color: #003b5c;
+  background: #003b5c;
   cursor: pointer;
+  font-weight: bolder;
 }
 
 .sw-theme-arrows > .nav .nav-link.active::after {
-  border-left-color: #5bc0de;
+  border-left-color: #003b5c;
 }
 
 .sw-theme-arrows > .nav .nav-link.done {
@@ -491,12 +492,12 @@
 }
 
 .sw-theme-dots > .nav .nav-link.active {
-  color: #5bc0de !important;
+  color: #003b5c !important;
   cursor: pointer;
 }
 
 .sw-theme-dots > .nav .nav-link.active::after {
-  background-color: #5bc0de !important;
+  background-color: #003b5c !important;
 }
 
 .sw-theme-dots > .nav .nav-link.done {

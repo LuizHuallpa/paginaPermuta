@@ -1,9 +1,11 @@
+
+
+
 body{
     
     font-family: 'Roboto', sans-serif;
     color:#fff;
     scroll-snap-type: y mandatory;
-
 }
 
 
@@ -117,6 +119,8 @@ body{
   text-decoration: none;
   color: black;
   margin-bottom: 0.2rem;
+  animation: beat 1s infinite alternate;
+	transform-origin: center;
 }
 
 .botao {
@@ -324,4 +328,8 @@ label{
   background-color: #003b5c;
   color: #fff;
   
+}
+
+@keyframes beat{
+	to { transform: scale(1.4); }
 }
