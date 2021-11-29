@@ -63,7 +63,11 @@ anchorSettings: {
 });
 
 function notValidate() {
-  Swal.fire('Responda todas as questões')
+  Swal.fire({
+    icon: 'error',
+    title: 'Erro',
+    text: 'Responda todas as questões'
+  })
 }
 
 $("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
