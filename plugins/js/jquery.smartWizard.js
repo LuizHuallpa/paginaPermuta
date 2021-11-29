@@ -59,10 +59,11 @@
             toolbarButtonPosition: 'right', // left, right, center
             showNextButton: true, // show/hide a Next button
             showPreviousButton: true, // show/hide a Previous button
+            showSendButton: true,
             toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
         },
         anchorSettings: {
-            anchorClickable: true, // Enable/Disable anchor navigation
+            anchorClickable: false, // Enable/Disable anchor navigation
             enableAllAnchors: false, // Activates all anchors clickable all times
             markDoneStep: true, // Add done state on navigation
             markAllPreviousStepsAsDone: true, // When a step selected by url hash, all previous steps are marked done
@@ -76,7 +77,8 @@
         },
         lang: { // Language variables for button
             next: 'Next',
-            previous: 'Previous'
+            previous: 'Previous',
+            send: 'Enviar'
         },
         disabledSteps: [], // Array Steps disabled
         errorSteps: [], // Highlight step with errors
@@ -176,6 +178,7 @@
           // Hidden steps
           this._setCSSClass(this.options.hiddenSteps, "hidden");
       }
+      
 
       _setEvents() {
           // Check if event handler already exists
@@ -210,8 +213,32 @@
 
           // Next button event
           this.main.find('.sw-btn-next').on("click", (e) => {
+          // Initialize the leaveStep event
+            $("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
+                if(stepDirection == 'forward') {
+                    // console.log(nextStepIndex)
+
+                    switch (nextStepIndex) {
+                        case 1:
+                            console.log('1');
+                            break;
+                        case 2:
+                            console.log('2');
+                            break;
+                        case 3:
+                            console.log('2');
+                            break;
+    
+
+                      }
+                      
+
+                }
+                
+            });
               e.preventDefault();
               this._showNext();
+
           });
 
           // Previous button event
@@ -273,7 +300,8 @@
           // Create the toolbar buttons
           let btnNext       = this.options.toolbarSettings.showNextButton !== false ? $('<button></button>').text(this.options.lang.next).addClass('btn sw-btn-next').attr('type', 'button') : null;
           let btnPrevious   = this.options.toolbarSettings.showPreviousButton !== false ? $('<button></button>').text(this.options.lang.previous).addClass('btn sw-btn-prev').attr('type', 'button') : null;
-          toolbar.append(btnPrevious, btnNext);
+          let btnSend   = this.options.toolbarSettings.showSendButton !== false ? $('<button></button>').text(this.options.lang.send).addClass('btn').attr('type', 'button') : null;
+          toolbar.append(btnPrevious, btnNext, btnSend);
 
           // Add extra toolbar buttons
           if (this.options.toolbarSettings.toolbarExtraButtons && this.options.toolbarSettings.toolbarExtraButtons.length > 0) {

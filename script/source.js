@@ -13,6 +13,14 @@ new DG.OnOffSwitchAuto({
   $(document).ready(function(){
 
 // SmartWizard initialize
+
+var btnFinish = $('<button class="enviarButton" id="botaoEnviar"></button>').text('Enviar')
+.addClass('btn btn-info')
+.on('click', function(){ alert('Finish Clicked'); });
+var btnCancel = $('<button></button>').text('Início')
+.addClass('btn btn-danger')
+.on('click', function(){ $('#smartwizard').smartWizard("reset"); });
+
 $('#smartwizard').smartWizard({
 theme: 'arrows',
 autoAdjustHeight: true, // Automatically adjust content height
@@ -28,53 +36,38 @@ toolbarPosition: 'bottom', // none, top, bottom, both
 toolbarButtonPosition: 'left', // left, right, center
 showNextButton: true, // show/hide a Next button
 showPreviousButton: true, // show/hide a Previous button
-toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
+toolbarExtraButtons: [btnFinish] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
 },
+anchorSettings: {
+  anchorClickable: false, // Enable/Disable anchor navigation
+  enableAllAnchors: false, // Activates all anchors clickable all times
+  markDoneStep: true, // Add done state on navigation
+  markAllPreviousStepsAsDone: true, // When a step selected by url hash, all previous steps are marked done
+  removeDoneStepOnNavigateBack: false, // While navigate back done step after active step will be cleared
+  enableAnchorOnDoneStep: true // Enable/Disable the done steps navigation
+}
 
 });
 
 });
 
-$('#smartwizard1').smartWizard({
-  theme: 'arrows',
-  autoAdjustHeight: false, // Automatically adjust content height
-  cycleSteps: false, // Allows to cycle the navigation of steps
-  backButtonSupport: true, // Enable the back button support
-  lang: { // Language variables for button
-  next: 'Próximo',
-  previous: 'Anterior',
-  finish: 'Enviar'
-  },
-  toolbarSettings: {
-  toolbarPosition: 'bottom', // none, top, bottom, both
-  toolbarButtonPosition: 'left', // left, right, center
-  showNextButton: true, // show/hide a Next button
-  showPreviousButton: true, // show/hide a Previous button
-  toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
-  },
-  
-  });
-  
+  $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
+    // console.log(stepPosition)
+    // console.log(stepNumber)
+     if(stepPosition === 'last') {
+        $(".enviarButton").show('slow');
+     } else {
+      $(".enviarButton").hide('slow');
+    }
 
-  $('#smartwizard2').smartWizard({
-    theme: 'arrows',
-    autoAdjustHeight: true, // Automatically adjust content height
-    cycleSteps: false, // Allows to cycle the navigation of steps
-    backButtonSupport: true, // Enable the back button support
-    lang: { // Language variables for button
-    next: 'Próximo',
-    previous: 'Anterior',
-    finish: 'Enviar'
-    },
-    toolbarSettings: {
-    toolbarPosition: 'bottom', // none, top, bottom, both
-    toolbarButtonPosition: 'left', // left, right, center
-    showNextButton: true, // show/hide a Next button
-    showPreviousButton: true, // show/hide a Previous button
-    toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
-    },
-    
-    });
+
+});
+
+
+
+
+
+
 
 
 $(document).ready(function(){
@@ -113,21 +106,21 @@ translation: {
 $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
 });
 
-$('#kt_docs_repeater_basic').repeater({
-  initEmpty: false,
+// $('#kt_docs_repeater_basic').repeater({
+//   initEmpty: false,
 
-  defaultValues: {
-      'text-input': 'foo'
-  },
+//   defaultValues: {
+//       'text-input': 'foo'
+//   },
 
-  show: function () {
-      $(this).slideDown();
-  },
+//   show: function () {
+//       $(this).slideDown();
+//   },
 
-  hide: function (deleteElement) {
-      $(this).slideUp(deleteElement);
-  }
-});
+//   hide: function (deleteElement) {
+//       $(this).slideUp(deleteElement);
+//   }
+// });
 
 
 var objVideos = {}, videos = [];
