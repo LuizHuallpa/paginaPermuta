@@ -214,28 +214,7 @@
           // Next button event
           this.main.find('.sw-btn-next').on("click", (e) => {
           // Initialize the leaveStep event
-            $("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
-                if(stepDirection == 'forward') {
-                    // console.log(nextStepIndex)
 
-                    switch (nextStepIndex) {
-                        case 1:
-                            console.log('1');
-                            break;
-                        case 2:
-                            console.log('2');
-                            break;
-                        case 3:
-                            console.log('2');
-                            break;
-    
-
-                      }
-                      
-
-                }
-                
-            });
               e.preventDefault();
               this._showNext();
 

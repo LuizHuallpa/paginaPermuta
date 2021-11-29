@@ -38,7 +38,7 @@ showPreviousButton: true, // show/hide a Previous button
 toolbarExtraButtons: [btnFinish] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
 },
 anchorSettings: {
-  anchorClickable: false, // Enable/Disable anchor navigation
+  anchorClickable: true, // Enable/Disable anchor navigation
   enableAllAnchors: false, // Activates all anchors clickable all times
   markDoneStep: true, // Add done state on navigation
   markAllPreviousStepsAsDone: true, // When a step selected by url hash, all previous steps are marked done
@@ -62,7 +62,22 @@ anchorSettings: {
 
 });
 
-
+$("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
+  if(stepDirection == 'forward') {
+      switch (nextStepIndex) {
+          case 1:
+              console.log('1');
+              break;
+          case 2:
+              console.log('2');
+              // return false;
+              break;   
+          case 3:
+              console.log('3');
+              break;
+        }  
+  } 
+});
 
 
 
@@ -104,23 +119,6 @@ translation: {
 });
 $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
 });
-
-// $('#kt_docs_repeater_basic').repeater({
-//   initEmpty: false,
-
-//   defaultValues: {
-//       'text-input': 'foo'
-//   },
-
-//   show: function () {
-//       $(this).slideDown();
-//   },
-
-//   hide: function (deleteElement) {
-//       $(this).slideUp(deleteElement);
-//   }
-// });
-
 
 var objVideos = {}, videos = [];
 objVideos.descricao = 'oi';
@@ -231,9 +229,7 @@ $('form').submit(function (e) {
       processData: false,
       type: 'POST',
 
-      // This will override the content type header, 
-      // regardless of whether content is actually sent.
-      // Defaults to 'application/x-www-form-urlencoded'
+
       contentType: 'multipart/form-data', 
 
 
