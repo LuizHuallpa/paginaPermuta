@@ -102,7 +102,7 @@ $("#smartwizard").on(
         break;
         case 2:
           console.log("2");
-          // return false;
+       
           break;
 
         case 3:
