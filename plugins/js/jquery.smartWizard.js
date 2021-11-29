@@ -301,7 +301,7 @@
           let btnNext       = this.options.toolbarSettings.showNextButton !== false ? $('<button></button>').text(this.options.lang.next).addClass('btn sw-btn-next').attr('type', 'button') : null;
           let btnPrevious   = this.options.toolbarSettings.showPreviousButton !== false ? $('<button></button>').text(this.options.lang.previous).addClass('btn sw-btn-prev').attr('type', 'button') : null;
           let btnSend   = this.options.toolbarSettings.showSendButton !== false ? $('<button></button>').text(this.options.lang.send).addClass('btn').attr('type', 'button') : null;
-          toolbar.append(btnPrevious, btnNext, btnSend);
+          toolbar.append(btnPrevious, btnNext);
 
           // Add extra toolbar buttons
           if (this.options.toolbarSettings.toolbarExtraButtons && this.options.toolbarSettings.toolbarExtraButtons.length > 0) {

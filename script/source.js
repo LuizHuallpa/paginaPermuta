@@ -14,7 +14,7 @@ new DG.OnOffSwitchAuto({
 
 // SmartWizard initialize
 
-var btnFinish = $('<button class="enviarButton" id="botaoEnviar"></button>').text('Enviar')
+var btnFinish = $('<button class="enviarButton" id="botaoEnviar" style="display:none;"></button>').text('Enviar')
 .addClass('btn btn-info')
 .on('click', function(){ alert('Finish Clicked'); });
 var btnCancel = $('<button></button>').text('Início')
@@ -28,8 +28,7 @@ cycleSteps: false, // Allows to cycle the navigation of steps
 backButtonSupport: true, // Enable the back button support
 lang: { // Language variables for button
 next: 'Próximo',
-previous: 'Anterior',
-finish: 'Enviar'
+previous: 'Anterior'
 },
 toolbarSettings: {
 toolbarPosition: 'bottom', // none, top, bottom, both
