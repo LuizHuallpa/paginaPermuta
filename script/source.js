@@ -62,6 +62,10 @@ anchorSettings: {
 
 });
 
+function notValidate() {
+  Swal.fire('Responda todas as questões')
+}
+
 $("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
   if(stepDirection == 'forward') {
       switch (nextStepIndex) {
@@ -69,16 +73,28 @@ $("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, ne
               console.log('1');
               if(document.getElementById('inlineRadioReformas1').checked || document.getElementById('inlineRadioReformas2').checked){
                       
-              }else{return false;}
+              }else{              
+                notValidate()
+                return false;
+              }
               if(document.getElementById('inlineRadioDividas1').checked || document.getElementById('inlineRadioDividas2').checked){
                       
-              }else{return false;}
+              }else{
+                notValidate()
+                return false;
+              }
               if(document.getElementById('inlineRadioMatricula1').checked || document.getElementById('inlineRadioMatricula2').checked){
                       
-              }else{return false;}
+              }else{
+                notValidate()
+                return false;
+              }
               if(document.getElementById('inlineRadioPermuta1').checked || document.getElementById('inlineRadioPermuta2').checked){
                       
-              }else{return false;}
+              }else{
+                notValidate()
+                return false;
+              }
               
              
           case 2:
