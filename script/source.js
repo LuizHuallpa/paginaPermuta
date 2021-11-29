@@ -67,7 +67,20 @@ $("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, ne
       switch (nextStepIndex) {
           case 1:
               console.log('1');
-              break;
+              if(document.getElementById('inlineRadioReformas1').checked || document.getElementById('inlineRadioReformas2').checked){
+                console.log('check')       
+              }else{return false;}
+              if(document.getElementById('inlineRadioDividas1').checked || document.getElementById('inlineRadioDividas2').checked){
+                console.log('check')       
+              }else{return false;}
+              if(document.getElementById('inlineRadioMatricula1').checked || document.getElementById('inlineRadioMatricula2').checked){
+                console.log('check')       
+              }else{return false;}
+              if(document.getElementById('inlineRadioPermuta1').checked || document.getElementById('inlineRadioPermuta2').checked){
+                console.log('check')       
+              }else{return false;}
+              
+             
           case 2:
               console.log('2');
               // return false;
@@ -75,7 +88,7 @@ $("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, ne
           case 3:
               console.log('3');
               break;
-        }  
+      }  
   } 
 });
 
