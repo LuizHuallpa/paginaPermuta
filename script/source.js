@@ -1,15 +1,5 @@
 new WOW().init();
 
-new DG.OnOffSwitchAuto({
-  cls: ".botaoSwitch",
-  height: 30,
-  trackColorOn: "#003b5c",
-  trackColorOff: "#666",
-  trackBorderColor: "#555",
-  textColorOff: "#fff",
-  textOn: "SIM",
-  textOff: "NÂO",
-});
 $(document).ready(function () {
   // SmartWizard initialize
 
@@ -48,7 +38,7 @@ $(document).ready(function () {
       toolbarExtraButtons: [btnFinish], // Extra buttons to show on toolbar, array of jQuery input/buttons elements
     },
     anchorSettings: {
-      anchorClickable: true, // Enable/Disable anchor navigation
+      anchorClickable: false, // Enable/Disable anchor navigation
       enableAllAnchors: false, // Activates all anchors clickable all times
       markDoneStep: true, // Add done state on navigation
       markAllPreviousStepsAsDone: true, // When a step selected by url hash, all previous steps are marked done
@@ -79,9 +69,18 @@ function notValidate() {
 }
 
 //Validador do Wizard
+
 $("#smartwizard").on(
   "leaveStep",
   function (e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
+    var valor = document.getElementById("valor").value;
+    var cidade = document.getElementById("cidade").value;
+    var metragemConstrucao = document.getElementById("metragemConstrucao").value;
+    var metragemTerreno = document.getElementById("metragemTerreno").value;
+    var endereco = document.getElementById("endereco").value;
+    var nome = document.getElementById("nome").value;
+    var celular = document.getElementById("celular").value;
+    var vazio = 0
     if (stepDirection == "forward") {
       switch (nextStepIndex) {
         case 1:
@@ -99,20 +98,88 @@ $("#smartwizard").on(
             notValidate();
             return false;
           }
-        break;
+          break;
         case 2:
-          console.log("2");
-       
+
+
+          if (valor == null || valor == "") {
+            document.getElementById("valor").classList.add("is-invalid");
+            notValidate();
+            vazio = 1
+          }else{
+            vazio = 0
+            document.getElementById("valor").classList.remove("is-invalid");
+          }
+
+          if (cidade == null || cidade == "") {
+            document.getElementById("cidade").classList.add("is-invalid");
+            notValidate();
+            vazio = 1
+          }else{
+            vazio = 0
+            document.getElementById("cidade").classList.remove("is-invalid");
+          }
+          if (metragemConstrucao == null || metragemConstrucao == "") {
+            document.getElementById("metragemConstrucao").classList.add("is-invalid");
+            notValidate();
+            vazio = 1
+          }else{
+            vazio = 0
+            document.getElementById("metragemConstrucao").classList.remove("is-invalid");
+          }
+          if (metragemTerreno == null || metragemTerreno == "") {
+            document.getElementById("metragemTerreno").classList.add("is-invalid");
+            notValidate();
+            vazio = 1
+          }else{
+            vazio = 0
+            document.getElementById("metragemTerreno").classList.remove("is-invalid");
+          }
+          if (endereco == null || endereco == "") {
+            document.getElementById("endereco").classList.add("is-invalid");
+            notValidate();
+            vazio = 1
+          }else{
+            vazio = 0
+            document.getElementById("endereco").classList.remove("is-invalid");
+          }
+
+          if(vazio == 1) {
+            return false;
+          }
+
           break;
 
         case 3:
-          console.log("3");
+          if (nome == null || nome == "") {
+            document.getElementById("nome").classList.add("is-invalid");
+            notValidate();
+            vazio = 1
+          }else{
+            vazio = 0
+            document.getElementById("nome").classList.remove("is-invalid");
+          }
+
+          if (celular == null || celular == "") {
+            document.getElementById("celular").classList.add("is-invalid");
+            notValidate();
+            vazio = 1
+          }else{
+            vazio = 0
+            document.getElementById("celular").classList.remove("is-invalid");
+          }
+
+          if(vazio == 1) {
+            return false;
+          }
+
           break;
       }
     }
   }
 );
 
+//Mascaras
 $(document).ready(function () {
   $(".date").mask("00/00/0000");
   $(".time").mask("00:00:00");
