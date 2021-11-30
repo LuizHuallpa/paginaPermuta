@@ -8,15 +8,43 @@ $(document).ready(function () {
   )
     .text("Enviar")
     .addClass("btn btn-info")
-    .on("click", function () {
-      alert("Finish Clicked");
+    .on("click", function (e) {
+        var data;
+      
+        data = new FormData();
+      
+        $.ajax({
+          url: "",
+          data: data,
+          processData: false,
+          type: "POST",
+      
+          contentType: "multipart/form-data",
+      
+          // Now you should be able to do this:
+          mimeType: "multipart/form-data", //Property added in 1.5.1
+      
+          success: function (data) {
+            alert(data);
+          },
+          error: function (){
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Algo deu errado',
+              footer: 'Tente novamente quando possível'
+            })
+          }
+        });
+        e.preventDefault();
+     
     });
 
   $("#smartwizard").smartWizard({
     selected: 0,
     enableURLhash: false,
     theme: "arrows",
-    autoAdjustHeight: true, // Automatically adjust content height
+    autoAdjustHeight: false, // Automatically adjust content height
     cycleSteps: false, // Allows to cycle the navigation of steps
     backButtonSupport: true, // Enable the back button support
     lang: {
@@ -65,7 +93,7 @@ function notValidate() {
 //Validador do Wizard
 
 $("#smartwizard").on(
-  "leaveStep",
+  "leaveStep", // Ao deixar o passo
   function (e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
     var valor = document.getElementById("valor").value;
     var cidade = document.getElementById("cidade").value;
@@ -75,7 +103,7 @@ $("#smartwizard").on(
     var nome = document.getElementById("nome").value;
     var celular = document.getElementById("celular").value;
     var vazio = 0
-    if (stepDirection == "forward") {
+    if (stepDirection == "forward") {  //Apenas Verifica se o Wizard está indo pra frente
       switch (nextStepIndex) {
         case 1:
           if (
@@ -93,9 +121,8 @@ $("#smartwizard").on(
             return false;
           }
           break;
+
         case 2:
-
-
           if (valor == null || valor == "") {
             document.getElementById("valor").classList.add("is-invalid");
             notValidate();
@@ -113,6 +140,7 @@ $("#smartwizard").on(
             vazio = 0
             document.getElementById("cidade").classList.remove("is-invalid");
           }
+
           if (metragemConstrucao == null || metragemConstrucao == "") {
             document.getElementById("metragemConstrucao").classList.add("is-invalid");
             notValidate();
@@ -121,6 +149,7 @@ $("#smartwizard").on(
             vazio = 0
             document.getElementById("metragemConstrucao").classList.remove("is-invalid");
           }
+
           if (metragemTerreno == null || metragemTerreno == "") {
             document.getElementById("metragemTerreno").classList.add("is-invalid");
             notValidate();
@@ -129,6 +158,7 @@ $("#smartwizard").on(
             vazio = 0
             document.getElementById("metragemTerreno").classList.remove("is-invalid");
           }
+
           if (endereco == null || endereco == "") {
             document.getElementById("endereco").classList.add("is-invalid");
             notValidate();
@@ -138,7 +168,7 @@ $("#smartwizard").on(
             document.getElementById("endereco").classList.remove("is-invalid");
           }
 
-          if(vazio == 1) {
+          if(vazio == 1) { //Empede que ele avance de passo
             return false;
           }
 
@@ -163,7 +193,7 @@ $("#smartwizard").on(
             document.getElementById("celular").classList.remove("is-invalid");
           }
 
-          if(vazio == 1) {
+          if(vazio == 1) { //Empede que ele avance de passo
             return false;
           }
 
@@ -306,25 +336,4 @@ function removeListVideos(id) {
   spanVideos.innerHTML = countLiVideos;
 }
 
-$("form").submit(function (e) {
-  var data;
 
-  data = new FormData();
-
-  $.ajax({
-    url: "",
-    data: data,
-    processData: false,
-    type: "POST",
-
-    contentType: "multipart/form-data",
-
-    // Now you should be able to do this:
-    mimeType: "multipart/form-data", //Property added in 1.5.1
-
-    success: function (data) {
-      alert(data);
-    },
-  });
-  e.preventDefault();
-});
