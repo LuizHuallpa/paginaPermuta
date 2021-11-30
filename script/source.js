@@ -4,7 +4,7 @@ $(document).ready(function () {
   // SmartWizard initialize
 
   var btnFinish = $(
-    '<button class="enviarButton" id="botaoEnviar" style="display:none;"></button>'
+    '<button class="enviarButton" type="submit" id="botaoEnviar" style="display:none;"></button>'
   )
     .text("Enviar")
     .addClass("btn btn-info")
