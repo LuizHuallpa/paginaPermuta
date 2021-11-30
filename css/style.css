@@ -65,21 +65,22 @@ body{
 
 .page2{
     background-color: #003b5c;
-    /*min-height: 100%;*/
+    min-height: 100vh;
     /* background-image:  url("/imgs/bg4.jpg"); */
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repet;
     background-position: center center;
-    height: 100vh; 
+    /* height: 100vh;  */
     color: #fff;
+    padding: 10px;
   
   
   
 }
 
-.page2test{
-  /* background-color: #fff; */
+/* .page2test{
+
   min-height: 100%;
   background-image:  url("/imgs/bg4.jpg");
   background-size: cover;
@@ -92,15 +93,13 @@ body{
 
 .page2test2{
   background-color: #003b5c;
-  /*min-height: 100%;*/
-  /* background-image:  url("/imgs/bg4.jpg"); */
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repet;
   background-position: center center;
   height: 100vh; 
   color: #fff;
-}
+} */
 
 .page3{
   background-color: #fff;
