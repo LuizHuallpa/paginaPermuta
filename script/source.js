@@ -11,12 +11,6 @@ $(document).ready(function () {
     .on("click", function () {
       alert("Finish Clicked");
     });
-  var btnCancel = $("<button></button>")
-    .text("Início")
-    .addClass("btn btn-danger")
-    .on("click", function () {
-      $("#smartwizard").smartWizard("reset");
-    });
 
   $("#smartwizard").smartWizard({
     selected: 0,
@@ -64,7 +58,7 @@ function notValidate() {
   Swal.fire({
     icon: "error",
     title: "Erro",
-    text: "Responda todas as questões",
+    text: "Responda todas as questões obrigatórias",
   });
 }
 
