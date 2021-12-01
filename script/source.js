@@ -94,7 +94,7 @@ function notValidate() {
 //Validador do Wizard
 
 $("#smartwizard").on(
-  "leaveStep", // Ao deixar o passo
+  "leaveStep", // Antes de  deixar o passo
   function (e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
     var valor = document.getElementById("valor").value;
     var cidade = document.getElementById("cidade").value;
@@ -127,7 +127,7 @@ $("#smartwizard").on(
         case 2:
           if (valor == null || valor == "") {
             document.getElementById("valor").classList.add("is-invalid");
-            notValidate();
+            
             vazio++
           }else{
             
@@ -136,7 +136,7 @@ $("#smartwizard").on(
 
           if (cidade == null || cidade == "") {
             document.getElementById("cidade").classList.add("is-invalid");
-            notValidate();
+            
             vazio++
           }else{
             
@@ -145,7 +145,7 @@ $("#smartwizard").on(
 
           if (metragemConstrucao == null || metragemConstrucao == "") {
             document.getElementById("metragemConstrucao").classList.add("is-invalid");
-            notValidate();
+            
             vazio++
           }else{
             
@@ -154,7 +154,7 @@ $("#smartwizard").on(
 
           if (metragemTerreno == null || metragemTerreno == "") {
             document.getElementById("metragemTerreno").classList.add("is-invalid");
-            notValidate();
+            
             vazio++
           }else{
             
@@ -163,15 +163,16 @@ $("#smartwizard").on(
 
           if (endereco == null || endereco == "") {
             document.getElementById("endereco").classList.add("is-invalid");
-            notValidate();
+            
             vazio++
           }else{
             
             document.getElementById("endereco").classList.remove("is-invalid");
           }
 
-          if(vazio > 0) { //Empede que ele avance de passo
-            return false;
+          if(vazio > 0) { 
+            notValidate();
+            return false;//Impede que ele avance de passo
           }
 
           break;
@@ -179,7 +180,7 @@ $("#smartwizard").on(
         case 3:
           if (nome == null || nome == "") {
             document.getElementById("nome").classList.add("is-invalid");
-            notValidate();
+            
             vazio++
           }else{
             
@@ -189,7 +190,7 @@ $("#smartwizard").on(
 
           if (((celular == null || celular == "") || (!regex.test(celular)))) {
             document.getElementById("celular").classList.add("is-invalid");
-            notValidate();
+            
             vazio++     
           }else{
             console.log("Válido")
@@ -198,8 +199,10 @@ $("#smartwizard").on(
           }
 
 
-          if(vazio > 0) { //Empede que ele avance de passo
-            return false;
+          if(vazio > 0) { 
+            notValidate();
+            return false;//Impede que ele avance de passo
+            
           }
 
           break;
