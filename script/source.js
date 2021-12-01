@@ -82,11 +82,12 @@ $("#smartwizard").on(
   }
 );
 
+
 function notValidate() {
   Swal.fire({
     icon: "error",
     title: "Erro",
-    text: "Responda todas as questões obrigatórias",
+    text: "Preencha corretamente todas as questões obrigatórias",
   });
 }
 
@@ -102,6 +103,7 @@ $("#smartwizard").on(
     var endereco = document.getElementById("endereco").value;
     var nome = document.getElementById("nome").value;
     var celular = document.getElementById("celular").value;
+    var regex = new RegExp('^\\(((1[1-9])|([2-9][0-9]))\\)((3[0-9]{3}-[0-9]{4})|(9[0-9]{4}-[0-9]{4}))$') 
     var vazio = 0
     if (stepDirection == "forward") {  //Apenas Verifica se o Wizard está indo pra frente
       switch (nextStepIndex) {
@@ -126,49 +128,49 @@ $("#smartwizard").on(
           if (valor == null || valor == "") {
             document.getElementById("valor").classList.add("is-invalid");
             notValidate();
-            vazio = 1
+            vazio++
           }else{
-            vazio = 0
+            
             document.getElementById("valor").classList.remove("is-invalid");
           }
 
           if (cidade == null || cidade == "") {
             document.getElementById("cidade").classList.add("is-invalid");
             notValidate();
-            vazio = 1
+            vazio++
           }else{
-            vazio = 0
+            
             document.getElementById("cidade").classList.remove("is-invalid");
           }
 
           if (metragemConstrucao == null || metragemConstrucao == "") {
             document.getElementById("metragemConstrucao").classList.add("is-invalid");
             notValidate();
-            vazio = 1
+            vazio++
           }else{
-            vazio = 0
+            
             document.getElementById("metragemConstrucao").classList.remove("is-invalid");
           }
 
           if (metragemTerreno == null || metragemTerreno == "") {
             document.getElementById("metragemTerreno").classList.add("is-invalid");
             notValidate();
-            vazio = 1
+            vazio++
           }else{
-            vazio = 0
+            
             document.getElementById("metragemTerreno").classList.remove("is-invalid");
           }
 
           if (endereco == null || endereco == "") {
             document.getElementById("endereco").classList.add("is-invalid");
             notValidate();
-            vazio = 1
+            vazio++
           }else{
-            vazio = 0
+            
             document.getElementById("endereco").classList.remove("is-invalid");
           }
 
-          if(vazio == 1) { //Empede que ele avance de passo
+          if(vazio > 0) { //Empede que ele avance de passo
             return false;
           }
 
@@ -178,22 +180,25 @@ $("#smartwizard").on(
           if (nome == null || nome == "") {
             document.getElementById("nome").classList.add("is-invalid");
             notValidate();
-            vazio = 1
+            vazio++
           }else{
-            vazio = 0
+            
             document.getElementById("nome").classList.remove("is-invalid");
           }
 
-          if (celular == null || celular == "") {
+
+          if (((celular == null || celular == "") || (!regex.test(celular)))) {
             document.getElementById("celular").classList.add("is-invalid");
             notValidate();
-            vazio = 1
+            vazio++     
           }else{
-            vazio = 0
+            console.log("Válido")
             document.getElementById("celular").classList.remove("is-invalid");
+            
           }
 
-          if(vazio == 1) { //Empede que ele avance de passo
+
+          if(vazio > 0) { //Empede que ele avance de passo
             return false;
           }
 
@@ -210,7 +215,7 @@ $(document).ready(function () {
   $(".date_time").mask("00/00/0000 00:00:00");
   $(".cep").mask("00000-000");
   $(".phone").mask("0000-0000");
-  $(".phone_with_ddd").mask("(00) 00000-0000");
+  $(".phone_with_ddd").mask("(00)00000-0000");
   $(".phone_us").mask("(000) 000-0000");
   $(".mixed").mask("AAA 000-S0S");
   $(".cpf").mask("000.000.000-00", { reverse: true });
