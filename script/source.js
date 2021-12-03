@@ -12,7 +12,25 @@ $(document).ready(function () {
         var data;
       
         data = new FormData();
+        let link_imagens = [], desc_imagens = [], link_videos = [], desc_videos = [];
+        $('.linkImagem').each(function(){
+          link_imagens.push($(this).attr('href'));
+          desc_imagens.push($(this).text());
+          console.log("links imagens: ", link_imagens, "Desc: ", desc_imagens)
+        });
+
+        $('.linkVideo').each(function(){
+          link_videos.push($(this).attr('href'));
+          desc_videos.push($(this).text());
+          console.log("links videos: ", link_videos, "Desc: ", desc_videos)
+        });
+
+ 
+
       
+        
+
+
         $.ajax({
           url: "",
           data: data,
@@ -266,6 +284,7 @@ var spanVideos = document.getElementById("contagemVideos");
 const adicionar = () => {
   let anchor = document.createElement("a");
   anchor.setAttribute("target", "_blank");
+  anchor.setAttribute("class", "linkImagem");
   anchor.id = "linkFoto_" + contadorListaFotos;
   anchor.setAttribute("name", "linkFoto_" + contadorListaFotos);
   let list = document.getElementById("linksListFotos");
@@ -307,6 +326,7 @@ var contadorListaVideos = 0;
 const adicionarVideos = () => {
   let anchor = document.createElement("a");
   anchor.setAttribute("target", "_blank");
+  anchor.setAttribute("class", "linkVideo");
   anchor.id = "linkFoto_" + contadorListaVideos;
   anchor.setAttribute("name", "linkFoto_" + contadorListaVideos);
   let list = document.getElementById("linksListVideos");
